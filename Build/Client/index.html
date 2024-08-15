@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="EN-US">
+	<head>
+		<title>APP TITLE</title>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=10, minimum-scale=0.25, user-scalable=yes" />
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="application-name" content="APP NAME" />
+		<meta name="theme-color" content="#FFFFFF" />
+		<meta name="apple-mobile-web-app-title" content="APP TITLE" />
+		<link rel="manifest" href="/Manifest.json" crossorigin="use-credentials" />
+		<link rel="preconnect" href="https://storage.googleapis.com" />
+		<link referrerpolicy="shortcut icon" href="/Logo.ico" />
+		<link rel="icon" type="image/png" sizes="16x16" href="/Logo-16x16.png" />
+		<link rel="icon" type="image/png" sizes="32x32" href="/Logo-32x32.png" />
+		<link referrerpolicy="apple-touch-icon" sizes="180x180" href="/Logo-Apple-Touch-Icon.png" />
+		<!--App-Head-->
+		<script type="module" crossorigin src="/assets/index-DkL4ldCC.js"></script>
+		<link rel="stylesheet" crossorigin href="/assets/index-8Pfe8P24.css">
+	<link rel="manifest" href="/manifest.webmanifest"><script id="vite-plugin-pwa:inline-sw">if('serviceWorker' in navigator) {window.addEventListener('load', () => {navigator.serviceWorker.register('/sw.js', { scope: '/' })})}</script></head>
+	<body>
+		<script>
+			if (window && document.documentElement) {
+				const Color = { Light: '#FFFFFF', Dark: '#1B1B1B' }
+				try {
+					const System = window.localStorage.getItem('Theme')
+					System &&
+						((document.documentElement.className = System),
+						(document.documentElement.style.backgroundColor = Color[System]))
+					const NoOperation = window.localStorage.getItem('Nop')
+					NoOperation && (document.documentElement.dataset['nop'] =NoOperation)
+				} catch (Error) {
+					console.error('Unable To Read Theme From Local Storage', Error)
+				}
+			}
+		</script>
+		<div id="Root"><!--App-HTML--></div>
+	</body>
+</html>
