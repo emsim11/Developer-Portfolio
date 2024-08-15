@@ -6,7 +6,7 @@ import react from '@vitejs/plugin-react'
 import { VitePWA } from 'vite-plugin-pwa'
 import { terser as Terser } from 'rollup-plugin-terser'
 
-import Manifest from './Public/Manifest.json'
+import Manifest from './Manifest.json'
 let FavIcon = './Public/Logo.svg'
 
 export default defineConfig({
