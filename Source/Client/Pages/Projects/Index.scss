@@ -1,0 +1,22 @@
+@use '../../SASS/Mixins' as *;
+@use '../../SASS/Variables' as *;
+
+.Projects-Page {
+	@include Screen-Reader;
+}
+
+.Projects-Page-Content {
+	align-items: flex-start;
+	display: flex;
+	flex-direction: column;
+
+	@media (min-width: $Screen-Medium) {
+		align-items: flex-end;
+	}
+}
+
+.Projects-Page-Content-Container {
+	@include Fade-In(0.2s);
+	min-height: 85vh;
+	width: 100%;
+}

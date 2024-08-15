@@ -1,0 +1,21 @@
+@use '../../SASS/Variables' as *;
+
+.Main {
+	background-color: var(--Background-Primary);
+	min-height: calc(100vh - 4rem);
+	overflow-x: hidden;
+	// transition: color 700ms ease-in-out;
+}
+
+.Main-Container {
+	padding: 1rem;
+	max-width: 48rem;
+	min-height: 85vh;
+	margin-left: auto;
+	margin-right: auto;
+
+	@media (min-width: $Screen-Medium) {
+		margin-top: 2rem;
+		max-width: 72rem;
+	}
+}

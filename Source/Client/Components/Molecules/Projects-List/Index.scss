@@ -1,0 +1,42 @@
+@use '../../../SASS/Variables' as *;
+
+.Projects-List {
+	display: flex;
+	flex-direction: column;
+
+	& > * + * {
+		margin-top: 1.5rem;
+	}
+}
+
+.Projects-List-Container {
+	padding-bottom: 0.25rem;
+	/* border-b border-gray-200 dark:border-neutral-600 */
+}
+
+.Projects-List-Item {
+	& > * + * {
+		margin-top: 3.5rem;
+	}
+
+	@media (min-width: $Screen-Medium) {
+		margin-top: 5rem;
+	}
+}
+
+.Projects-List-Item-Key {
+	/* animate-slideUpCubiBezier animation-delay-1 */
+}
+
+.Projects-List-Nothing-Found {
+	display: flex;
+	justify-content: center;
+	margin-top: 2rem;
+	min-width: 100%;
+}
+
+.Projects-List-Nothing-Found-Title {
+	font-size: 1.5rem;
+	font-weight: 700;
+	line-height: 2rem;
+}

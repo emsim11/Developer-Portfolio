@@ -1,0 +1,150 @@
+@use '../../../SASS/Mixins' as *;
+@use '../../../SASS/Variables' as *;
+
+.Filter-Panel {
+	animation: 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+	background-image: none;
+	display: flex;
+	flex-direction: column;
+	// height: 100%;
+	padding-top: 5rem;
+	position: fixed;
+	right: 0;
+	top: 0;
+	transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1) ease-in-out;
+	width: 100%;
+	z-index: 20;
+
+	@media (min-width: $Screen-Medium) {
+		padding: 5rem 0.5rem 0.75rem 0.5rem;
+		width: 24rem;
+	}
+}
+
+.Filter-Panel-Open {
+	transform: translateX(0px);
+}
+
+.Filter-Panel-Closed {
+	transform: translateX(100%);
+}
+
+.Filter-Panel-Container {
+	animation: 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+	background-color: var(--Background-Filter-Section);
+	border: 1px solid var(--Border-Filter-Button);
+	box-shadow:
+		0 10px 15px -3px rgb(0 0 0 / 0.1),
+		0 4px 6px -4px rgb(0 0 0 / 0.1);
+	height: 100%;
+	margin-top: auto;
+	transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1) ease-in-out;
+	width: 100%;
+
+	@media (min-width: $Screen-Medium) {
+		border-radius: 0.75rem;
+	}
+}
+
+.Filter-Panel-Title {
+	align-items: center;
+	animation: 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+	border-top-left-radius: 1rem;
+	border-top-right-radius: 1rem;
+	display: flex;
+	height: 1.75rem;
+	justify-content: space-between;
+	padding: 0 1rem 0 1rem;
+	position: sticky;
+	top: 0;
+	transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1) ease-in-out;
+	z-index: 10;
+}
+
+.Filter-Panel-Filters-Close {
+	@include Screen-Reader;
+}
+
+.Filter-Panel-Filters-Close-Icon {
+	color: var(--Icon-Filter-Close);
+	height: 1.75rem;
+	// transition: color 500ms ease-in-out;
+	width: 1.75rem;
+
+	&:Hover {
+		color: var(--Icon-Filter-Close-Hover);
+	}
+}
+
+.Filter-Panel-Text-Container {
+	padding: 1rem;
+}
+
+.Filter-Panel-Text {
+	color: var(--Text-Filter-Name);
+	font-size: 0.875rem;
+	line-height: 1.25rem;
+	text-align: center;
+
+	@media (min-width: $Screen-Medium) {
+		font-size: 1.125rem;
+		line-height: 1.75rem;
+		text-align: left;
+	}
+}
+
+.Filter-Panel-Filter-Options {
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin-top: 1rem;
+
+	& > * + * {
+		margin-top: 0.75rem;
+	}
+}
+
+.Filter-Panel-Buttons {
+	display: flex;
+	flex-direction: row;
+	margin-top: 1.25rem;
+	padding-top: 0.75rem;
+
+	& > * + * {
+		margin-left: 0.5rem;
+	}
+	/* border-t border-neutral-300 dark:border-neutral-700 */
+}
+
+.Filter-Panel-Clear-Button {
+	background-color: rgb(245, 245, 245);
+	display: flex;
+	justify-content: flex-start;
+	padding: 1.5rem 0 1.5rem 0;
+	width: auto;
+	/*
+	border border-neutral-300 dark:border-neutral-700 */
+}
+
+.Filter-Panels {
+	width: 100%;
+}
+
+.Filter-Panel-Clear-Container {
+	align-items: center;
+	display: flex;
+
+	& > * + * {
+		margin-left: 0.5rem;
+	}
+}
+
+.Filter-Panel-Clear-Icon {
+	color: var(--Icon-Filter-Section);
+}
+
+.Filter-Panel-Archive-Toggle {
+	margin-top: -0.25rem;
+	width: 100%;
+}

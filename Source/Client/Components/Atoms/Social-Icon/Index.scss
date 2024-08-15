@@ -1,0 +1,15 @@
+@use '../../../SASS/Variables' as *;
+
+.Social-Icon {
+	color: var(--Icon-Social);
+	cursor: pointer;
+	margin-left: 0.5rem;
+	margin-right: 0.5rem;
+	transition: all 300ms;
+
+	@media (min-width: $Screen-Medium) {
+		&:Hover {
+			transform: translateY(0.25rem);
+		}
+	}
+}

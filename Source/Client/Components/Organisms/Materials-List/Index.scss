@@ -1,0 +1,37 @@
+@use '../../../SASS/Variables' as *;
+
+.Materials-List-Accordion {
+	margin-top: 4rem;
+}
+
+.Materials-List-Icon-Container {
+	align-items: center;
+	display: flex;
+
+	& > * + * {
+		margin-left: 0.75rem;
+	}
+}
+
+.Materials-List-Icon {
+	color: rgb(115, 115, 115);;
+}
+
+.Materials-List-Related-Materials {
+	font-size: 1.125rem;
+	font-weight: 600;
+	line-height: 1.75rem;
+	/*
+	text-neutral-600 dark:text-neutral-400 */
+}
+
+.Materials-List-Accordion-Content {
+	margin-top: 1rem;
+	padding-left: 0.5rem;
+	padding-right: 0.5rem;
+
+	@media (min-width: $Screen-Large) {
+		padding-left: 1rem;
+		padding-right: 1rem;
+	}
+}

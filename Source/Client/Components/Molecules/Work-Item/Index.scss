@@ -1,0 +1,181 @@
+@use '../../../SASS/Variables' as *;
+
+.Work-Item {
+	border-radius: 0.75rem;
+	display: flex;
+	flex-direction: column;
+
+	& > * + * {
+		margin-left: 0;
+		margin-top: 0.5rem;
+	}
+
+	@media (min-width: $Screen-Medium) {
+		flex-direction: row;
+
+		& > * + * {
+			margin-left: 2rem;
+			margin-top: 0;
+		}
+	}
+	/*
+	p-4 bg-neutral-100 dark:bg-neutral-800
+	transition-all duration-500 ease-in-out
+	border border-neutral-300 dark:border-neutral-700
+	shadow-md */
+}
+
+.Work-Item-Company {
+	align-items: flex-start;
+	display: flex;
+	justify-content: center;
+
+	@media (min-width: $Screen-Medium) {
+		justify-content: flex-start;
+	}
+	/* py-3 */
+}
+
+.Work-Item-Company-Link {
+	border-radius: 9999px;
+	height: 85px;
+	width: 85px;
+
+	&:Hover {
+		box-shadow:
+			0 10px 15px -3px rgb(0 0 0 / 0.1),
+			0 4px 6px -4px rgb(0 0 0 / 0.1);
+		transform: scale(1.05);
+	}
+	/*
+	transition-all duration-500 ease-in-out
+	border-2 border-neutral-200 dark:border-neutral-900
+	dark:hover:border-red-600 */
+}
+
+.Work-Item-Aspect-Ratio {
+	border-radius: 9999px;
+	overflow: hidden;
+	position: relative;
+	width: 100%;
+	/* bg-white */
+}
+
+.Work-Item-Company-Logo {
+	border-radius: 9999px;
+	box-shadow:
+		0 10px 15px -3px rgb(0 0 0 / 0.1),
+		0 4px 6px -4px rgb(0 0 0 / 0.1);
+	/*
+	object-cover
+	transition-all duration-500 ease-in-out */
+}
+
+.Work-Item-Details {
+	align-items: center;
+	border-radius: 0.75rem;
+	display: flex;
+	flex-direction: column;
+	text-align: left;
+
+	& > * + * {
+		margin-top: 0.5rem;
+	}
+
+	@media (min-width: $Screen-Small) {
+		padding: 0;
+	}
+
+	@media (min-width: $Screen-Medium) {
+		align-items: flex-start;
+	}
+	/*
+	ease-in-out
+	transition-colors duration-700 */
+}
+
+.Work-Item-Title {
+	/* text-3xl md:text-3xl font-bold
+	md:hover:text-red-500 md:dark:hover:text-red-800
+	transition-colors duration-700 ease-in-out */
+}
+
+.Work-Item-Website {
+	align-items: center;
+	display: flx;
+	flex-direction: column;
+	justify-content: center;
+
+	& > * + * {
+		margin-left: 0;
+	}
+
+	@media (min-width: $Screen-Medium) {
+		flex-direction: row;
+		justify-content: flex-start;
+
+		& > * + * {
+			margin-left: 1rem;
+		}
+	}
+	/*
+	text-lg
+	mb-2
+	text-neutral-500 dark:text-neutral-400 */
+}
+
+.Work-Item-Website-Link {
+	/* font-bold
+	hover:underline
+	hover:text-red-500 hover:dark:text-red-700
+	transition-colors duration-300 ease-in-out */
+}
+
+.Work-Item-Info {
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+
+	& > * + * {
+		margin-top: 0.5rem;
+	}
+
+	@media (min-width: $Screen-Medium) {
+		align-items: flex-start;
+		flex-direction: row;
+		justify-content: flex-start;
+
+		& > * + * {
+			margin-left: 1rem;
+			margin-top: 0;
+		}
+	}
+}
+
+.Work-Item-Dates {
+	/* text-neutral-800 dark:text-neutral-300 */
+}
+
+.Work-Item-Role-Type {
+	/* text-neutral-700 dark:text-neutral-400 */
+}
+
+.Work-Item-Credentials {
+	display: flex;
+	flex-direction: row;
+	vertical-align: bottom;
+
+	& > * + * {
+		margin-left: 1rem;
+	}
+	/* pt-3 */
+}
+
+.Work-Item-Info-Icon {
+	/* md:hover:-translate-y-1 transition-transform cursor-pointer */
+}
+
+.Work-Item-Arrow-Icon {
+	/* md:hover:-translate-y-1 transition-transform cursor-pointer */
+}

@@ -1,0 +1,11 @@
+@use '../../SASS/Mixins' as *;
+
+.Experience-Page {
+	@include Screen-Reader;
+}
+
+.Experience {
+	@include Fade-In(0.2s);
+	min-height: 85vh;
+	width: 100%;
+}

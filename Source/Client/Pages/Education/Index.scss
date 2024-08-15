@@ -1,0 +1,17 @@
+@use '../../SASS/Mixins' as *;
+
+.Education-Page {
+	@include Screen-Reader;
+}
+
+.Education {
+	@include Fade-In(0.2s);
+	min-height: 85vh;
+	width: 100%;
+}
+
+.Education-Courses {
+	@include Slide-Up-Cubic-Bezier(0.2s);
+	padding-bottom: 2rem;
+	padding-top: 2rem;
+}

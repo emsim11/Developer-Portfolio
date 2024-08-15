@@ -1,0 +1,51 @@
+@use '../../../SASS/Mixins' as *;
+@use '../../../SASS/Variables' as *;
+
+.Tag {
+    background-color: var(--Background-Tag);
+    border: 2px solid var(--Border-Tag);
+    border-radius: 0.5rem;
+	box-shadow: 1px 2px 0 rgba(0 0 0 / 0.05);
+    color: var(--Text-Tag);
+	display: flex;
+    font-weight: 600;
+	margin: 0.5rem 0.5rem 0 0;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    transition: all 0.7s ease-in-out; /* 0.3s */
+
+	&:Hover {
+		&.Tag-Hover {
+			box-shadow:
+				0 4px 6px -1px rgb(0 0 0 / 0.1),
+				0 2px 4px -2px rgb(0 0 0 / 0.1);
+			cursor: pointer;
+
+			@media (min-width: $Screen-Medium) {
+				border: 2px solid var(--Border-Tag-Hover);
+			}
+		}
+	}
+}
+
+.Tag-Container {
+	align-items: center;
+	display: flex;
+	justify-content: space-between;
+
+	& > * + * {
+		margin-left: 0.5rem;
+	}
+
+	@media (min-width: $Screen-Medium) {
+		&:Hover .Tag-Icon {
+			color: rgb(244, 114, 182);
+			transition: color 200ms;
+		}
+	}
+}
+
+.Tag-Icon {
+	&.Tag-Animate {
+		@include Bounce-Horizontal(1s, cubic-bezier(0.95, 0.05, 0.795, 0.035));
+	}
+}

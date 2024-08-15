@@ -1,0 +1,97 @@
+@use '../../../SASS/Variables' as *;
+
+.About-Title {
+	font-size: 2.25rem;
+	font-weight: 700;
+	line-height: 2.5rem;
+	text-align: center;
+}
+
+.About-Horizontal-Rule {
+	background-color: rgb(236, 72, 153);
+	border-radius: 0.25rem;
+	border-width: 0;
+	height: 0.25rem;
+	margin-bottom: 1rem;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 1rem;
+	width: 1.5rem;
+}
+
+.About {
+	align-items: stretch;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin-top: 2rem;
+	vertical-align: top;
+
+	@media (min-width: $Screen-Medium) {
+		margin-top: 1.25rem;
+	}
+
+	@media (min-width: $Screen-Large) {
+		flex-direction: row;
+		margin-left: 2.5rem;
+		margin-top: 0;
+		padding: 1rem;
+		text-align: left;
+	}
+}
+
+.About-Description {
+	@media (min-width: $Screen-Large) {
+		width: 50%;
+	}
+}
+
+.About-Description-Title {
+	font-size: 1.5rem;
+	font-weight: 700;
+	line-height: 2rem;
+	margin-bottom: 1.5rem;
+	margin-top: 1.5rem;
+	text-align: center;
+
+	@media (min-width: $Screen-Medium) {
+		text-align: left;
+	}
+}
+
+.About-Description-Container {
+	margin-top: 0.5rem;
+	text-align: left;
+}
+
+.About-Page-Link {
+	animation: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+	font-weight: 700;
+	transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+	&:Hover {
+		text-decoration: underline;
+		color: var(--Text-About-Page-Link-Hover);
+	}
+}
+
+.About-Skills {
+	text-align: center;
+
+	@media (min-width: $Screen-Medium) {
+		text-align: left;
+	}
+
+	@media (min-width: $Screen-Large) {
+		width: 50%;
+	}
+}
+
+.About-Section {
+	height: 0.25rem;
+	margin-top: 0.5rem;
+
+	@media (min-width: $Screen-Medium) {
+		margin-top: 1rem;
+	}
+}

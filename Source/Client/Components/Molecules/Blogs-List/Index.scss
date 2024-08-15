@@ -1,0 +1,27 @@
+.Blogs-List {
+	display: flex;
+	flex-direction: column;
+
+	& > * + * {
+		margin-top: 1.25rem;
+	}
+}
+
+.Blogs-List-Title {
+	/* border-b border-gray-200 dark:border-neutral-600 pb-1 */
+}
+
+.Blogs-List-Grid {
+	/* animate-slideUpCubiBezier animation-delay-1 */
+}
+
+.Blogs-List-None-Found {
+	display: flex;
+	justify-content: center;
+	min-width: 100%;
+	/* mt-8 */
+}
+
+.Blogs-List-None-Found-Title {
+	/* text-2xl font-bold */
+}

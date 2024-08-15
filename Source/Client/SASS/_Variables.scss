@@ -1,0 +1,488 @@
+@use './Color-Palette.scss' as *;
+
+$Color-Black: rgb(0, 0, 0); // #000000
+$Color-White: rgb(255, 255, 255); // #FFFFFF
+
+/* SLATE */
+$Color-Slate-50: rgb(248, 250, 252); // #F8FAFC
+$Color-Slate-100: rgb(241, 245, 249); // #F1F5F9
+$Color-Slate-200: rgb(226, 232, 240); // #E2E8F0
+$Color-Slate-300: rgb(203, 213, 225); // #CBD5E1
+$Color-Slate-400: rgb(148, 163, 184); // #94A3B8
+$Color-Slate-500: rgb(100, 116, 139); // #64748B
+$Color-Slate-600: rgb(71, 85, 105); // #475569
+$Color-Slate-700: rgb(51, 65, 85); // #334155
+$Color-Slate-800: rgb(30, 41, 59); // #1E293B
+$Color-Slate-900: rgb(15, 23, 42); // #0F172A
+$Color-Slate-950: rgb(02, 06, 23); // #020617
+
+/* GREY */
+$Color-Grey-50: rgb(249, 250, 251); // #F9FAFB
+$Color-Grey-100: rgb(243, 244, 246); // #F3F4F6
+$Color-Grey-200: rgb(229, 231, 235); // #E5E7EB
+$Color-Grey-300: rgb(209, 213, 219); // #D1D5DB
+$Color-Grey-400: rgb(156, 163, 175); // #9CA3AF
+$Color-Grey-500: rgb(107, 114, 128); // #6B7280
+$Color-Grey-600: rgb(75, 85, 99); // #4B5563
+$Color-Grey-700: rgb(55, 65, 81); // #374151
+$Color-Grey-800: rgb(31, 41, 55); // #1F2937
+$Color-Grey-900: rgb(17, 24, 39); // #111827
+$Color-Grey-950: rgb(03, 07, 18); // #030712
+
+/* ZINC */
+$Color-Zinc-50: rgb(250, 250, 250); // #FAFAFA
+$Color-Zinc-100: rgb(244, 244, 245); // #F4F4F5
+$Color-Zinc-200: rgb(228, 228, 231); // #E4E4E7
+$Color-Zinc-300: rgb(212, 212, 216); // #D4D4D8
+$Color-Zinc-400: rgb(161, 161, 170); // #A1A1AA
+$Color-Zinc-500: rgb(113, 113, 122); // #71717A
+$Color-Zinc-600: rgb(82, 82, 91); // #52525B
+$Color-Zinc-700: rgb(63, 63, 70); // #3F3F46
+$Color-Zinc-800: rgb(39, 39, 42); // #27272A
+$Color-Zinc-900: rgb(24, 24, 27); // #18181B
+$Color-Zinc-950: rgb(09, 09, 11); // #09090B
+
+/* NEUTRAL */
+$Color-Neutral-50: rgb(250, 250, 250); // #FAFAFA
+$Color-Neutral-100: rgb(245, 245, 245); // #F5F5F5
+$Color-Neutral-200: rgb(229, 229, 229); // #E5E5E5
+$Color-Neutral-300: rgb(212, 212, 212); // #D4D4D4
+$Color-Neutral-400: rgb(163, 163, 163); // #A3A3A3
+$Color-Neutral-500: rgb(115, 115, 115); // #737373
+$Color-Neutral-600: rgb(82, 82, 82); // #525252
+$Color-Neutral-700: rgb(64, 64, 64); // #404040
+$Color-Neutral-800: rgb(38, 38, 38); // #262626
+$Color-Neutral-900: rgb(23, 23, 23); // #171717
+$Color-Neutral-950: rgb(10, 10, 10); // #0A0A0A
+
+/* RED */
+$Color-Red-50: rgb(254, 242, 242); // #FEF2F2
+$Color-Red-100: rgb(254, 226, 226); // #FEE2E2
+$Color-Red-200: rgb(254, 202, 202); // #FECACA
+$Color-Red-300: rgb(252, 165, 165); // #FCA5A5
+$Color-Red-400: rgb(248, 113, 113); // #F87171
+$Color-Red-500: rgb(239, 68, 68); // #EF4444
+$Color-Red-600: rgb(220, 38, 38); // #DC2626
+$Color-Red-700: rgb(185, 28, 28); // #B91C1C
+$Color-Red-800: rgb(153, 27, 27); // #991B1B
+$Color-Red-900: rgb(127, 29, 29); // #7F1D1D
+$Color-Red-950: rgb(69, 10, 10); // #450A0A
+
+/* ORANGE */
+$Color-Orange-50: rgb(255, 247, 237); // #FFF7ED
+$Color-Orange-100: rgb(255, 237, 213); // #FFEDD5
+$Color-Orange-200: rgb(254, 215, 170); // #FED7AA
+$Color-Orange-300: rgb(253, 186, 116); // #FDBA74
+$Color-Orange-400: rgb(251, 146, 60); // #FB923C
+$Color-Orange-500: rgb(249, 115, 22); // #F97316
+$Color-Orange-600: rgb(234, 88, 12); // #EA580C
+$Color-Orange-700: rgb(194, 65, 12); // #C2410C
+$Color-Orange-800: rgb(154, 52, 18); // #9A3412
+$Color-Orange-900: rgb(124, 45, 18); // #7C2D12
+$Color-Orange-950: rgb(67, 20, 07); // #431407
+
+/* AMBER */
+$Color-Amber-50: rgb(255, 251, 235); // #FFFBEB
+$Color-Amber-100: rgb(254, 243, 199); // #FEF3C7
+$Color-Amber-200: rgb(253, 230, 138); // #FDE68A
+$Color-Amber-300: rgb(252, 211, 77); // #FCD34D
+$Color-Amber-400: rgb(251, 191, 36); // #FBBF24
+$Color-Amber-500: rgb(245, 158, 11); // #F59E0B
+$Color-Amber-600: rgb(217, 119, 06); // #D97706
+$Color-Amber-700: rgb(180, 83, 09); // #B45309
+$Color-Amber-800: rgb(146, 64, 14); // #92400E
+$Color-Amber-900: rgb(120, 53, 15); // #78350F
+$Color-Amber-950: rgb(69, 26, 03); // #451A03
+
+/* YELLOW */
+$Color-Yellow-50: rgb(254, 252, 232); // #FEFCE8
+$Color-Yellow-100: rgb(254, 249, 195); // #FEF9C3
+$Color-Yellow-200: rgb(254, 240, 138); // #FEF08A
+$Color-Yellow-300: rgb(253, 224, 71); // #FDE047
+$Color-Yellow-400: rgb(250, 204, 21); // #FACC15
+$Color-Yellow-500: rgb(234, 179, 08); // #EAB308
+$Color-Yellow-600: rgb(202, 138, 04); // #CA8A04
+$Color-Yellow-700: rgb(161, 98, 07); // #A16207
+$Color-Yellow-800: rgb(133, 77, 14); // #854D0E
+$Color-Yellow-900: rgb(113, 63, 18); // #713F12
+$Color-Yellow-950: rgb(66, 32, 06); // #422006
+
+/* LIME */
+$Color-Lime-50: rgb(247, 254, 231); // #F7FEE7
+$Color-Lime-100: rgb(236, 252, 203); // #ECFCCB
+$Color-Lime-200: rgb(217, 249, 157); // #D9F99D
+$Color-Lime-300: rgb(190, 242, 100); // #BEF264
+$Color-Lime-400: rgb(163, 230, 53); // #A3E635
+$Color-Lime-500: rgb(132, 204, 22); // #84CC16
+$Color-Lime-600: rgb(101, 163, 13); // #65A30D
+$Color-Lime-700: rgb(77, 124, 15); // #4D7C0F
+$Color-Lime-800: rgb(63, 98, 18); // #3F6212
+$Color-Lime-900: rgb(54, 83, 20); // #365314
+$Color-Lime-950: rgb(26, 46, 05); // #1A2E05
+
+/* GREEN */
+$Color-Green-50: rgb(240, 253, 244); // #F0FDF4
+$Color-Green-100: rgb(220, 252, 231); // #DCFCE7
+$Color-Green-200: rgb(187, 247, 208); // #BBF7D0
+$Color-Green-300: rgb(134, 239, 172); // #86EFAC
+$Color-Green-400: rgb(74, 222, 128); // #4ADE80
+$Color-Green-500: rgb(34, 197, 94); // #22C55E
+$Color-Green-600: rgb(22, 163, 74); // #16A34A
+$Color-Green-700: rgb(21, 128, 61); // #15803D
+$Color-Green-800: rgb(22, 101, 52); // #166534
+$Color-Green-900: rgb(20, 83, 45); // #14532D
+$Color-Green-950: rgb(05, 46, 22); // #052E16
+
+/* EMERALD */
+$Color-Emerald-50: rgb(236, 253, 245); // #ECFDF5
+$Color-Emerald-100: rgb(209, 250, 229); // #D1FAE5
+$Color-Emerald-200: rgb(167, 243, 208); // #A7F3D0
+$Color-Emerald-300: rgb(110, 231, 183); // #6EE7B7
+$Color-Emerald-400: rgb(52, 211, 153); // #34D399
+$Color-Emerald-500: rgb(16, 185, 129); // #10B981
+$Color-Emerald-600: rgb(05, 150, 105); // #059669
+$Color-Emerald-700: rgb(04, 120, 87); // #047857
+$Color-Emerald-800: rgb(06, 95, 70); // #065F46
+$Color-Emerald-900: rgb(06, 78, 59); // #064E3B
+$Color-Emerald-950: rgb(02, 44, 34); // #022C22
+
+/* TEAL */
+$Color-Teal-50: rgb(240, 253, 250); // #F0FDFA
+$Color-Teal-100: rgb(204, 251, 241); // #CCFBF1
+$Color-Teal-200: rgb(153, 246, 228); // #99F6E4
+$Color-Teal-300: rgb(94, 234, 212); // #5EEAD4
+$Color-Teal-400: rgb(45, 212, 191); // #2DD4BF
+$Color-Teal-500: rgb(20, 184, 166); // #14B8A6
+$Color-Teal-600: rgb(13, 148, 136); // #0D9488
+$Color-Teal-700: rgb(15, 118, 110); // #0F766E
+$Color-Teal-800: rgb(17, 94, 89); // #115E59
+$Color-Teal-900: rgb(19, 78, 74); // #134E4A
+$Color-Teal-950: rgb(04, 47, 46); // #042F2E
+
+/* CYAN */
+$Color-Cyan-50: rgb(236, 254, 255); // #ECFEFF
+$Color-Cyan-100: rgb(207, 250, 254); // #CFFAFE
+$Color-Cyan-200: rgb(165, 243, 252); // #A5F3FC
+$Color-Cyan-300: rgb(103, 232, 249); // #67E8F9
+$Color-Cyan-400: rgb(34, 211, 238); // #22D3EE
+$Color-Cyan-500: rgb(06, 182, 212); // #06B6D4
+$Color-Cyan-600: rgb(08, 145, 178); // #0891B2
+$Color-Cyan-700: rgb(14, 116, 144); // #0E7490
+$Color-Cyan-800: rgb(21, 94, 117); // #155E75
+$Color-Cyan-900: rgb(22, 78, 99); // #164E63
+$Color-Cyan-950: rgb(08, 51, 68); // #083344
+
+/* SKY */
+$Color-Sky-50: rgb(240, 249, 255); // #F0F9FF
+$Color-Sky-100: rgb(224, 242, 254); // #E0F2FE
+$Color-Sky-200: rgb(186, 230, 253); // #BAE6FD
+$Color-Sky-300: rgb(125, 211, 252); // #7DD3FC
+$Color-Sky-400: rgb(56, 189, 248); // #38BDF8
+$Color-Sky-500: rgb(14, 165, 233); // #0EA5E9
+$Color-Sky-600: rgb(02, 132, 199); // #0284C7
+$Color-Sky-700: rgb(03, 105, 161); // #0369A1
+$Color-Sky-800: rgb(07, 89, 133); // #075985
+$Color-Sky-900: rgb(12, 74, 110); // #0C4A6E
+$Color-Sky-950: rgb(08, 47, 73); // #082F49
+
+/* BLUE */
+$Color-Blue-50: rgb(239, 246, 255); // #EFF6FF
+$Color-Blue-100: rgb(219, 234, 254); // #DBEAFE
+$Color-Blue-200: rgb(191, 219, 254); // #BFDBFE
+$Color-Blue-300: rgb(147, 197, 253); // #93C5FD
+$Color-Blue-400: rgb(96, 165, 250); // #60A5fA
+$Color-Blue-500: rgb(59, 130, 246); // #3B82F6
+$Color-Blue-600: rgb(37, 99, 235); // #2563EB
+$Color-Blue-700: rgb(29, 78, 216); // #1D4ED8
+$Color-Blue-800: rgb(30, 64, 175); // #1E40AF
+$Color-Blue-900: rgb(30, 58, 138); // #1E3A8A
+$Color-Blue-950: rgb(23, 37, 84); // #172554
+
+/* INDIGO */
+$Color-Indigo-50: rgb(238, 242, 255); // #EEF2FF
+$Color-Indigo-100: rgb(224, 231, 255); // #E0E7FF
+$Color-Indigo-200: rgb(199, 210, 254); // #C7D2FE
+$Color-Indigo-300: rgb(165, 180, 252); // #A5B4FC
+$Color-Indigo-400: rgb(129, 140, 248); // #818CF8
+$Color-Indigo-500: rgb(99, 102, 241); // #6366F1
+$Color-Indigo-600: rgb(79, 70, 229); // #4F46E5
+$Color-Indigo-700: rgb(67, 56, 202); // #4338CA
+$Color-Indigo-800: rgb(55, 48, 163); // #3730A3
+$Color-Indigo-900: rgb(49, 46, 129); // #312E81
+$Color-Indigo-950: rgb(30, 27, 75); // #1E1B4B
+
+/* VIOLET */
+$Color-Violet-50: rgb(245, 243, 255); // #F5F3FF
+$Color-Violet-100: rgb(237, 233, 254); // #EDE9FE
+$Color-Violet-200: rgb(221, 214, 254); // #DDD6FE
+$Color-Violet-300: rgb(196, 181, 253); // #C4B5FD
+$Color-Violet-400: rgb(167, 139, 250); // #A78BFA
+$Color-Violet-500: rgb(139, 92, 246); // #8B5CF6
+$Color-Violet-600: rgb(124, 58, 237); // #7C3AED
+$Color-Violet-700: rgb(109, 40, 217); // #6D28D9
+$Color-Violet-800: rgb(91, 33, 182); // #5B21B6
+$Color-Violet-900: rgb(76, 29, 149); // #4C1D95
+$Color-Violet-950: rgb(46, 16, 101); // #2E1065
+
+/* PURPLE */
+$Color-Purple-50: rgb(250, 245, 255); // #FAF5FF
+$Color-Purple-100: rgb(243, 232, 255); // #F3E8FF
+$Color-Purple-200: rgb(233, 213, 255); // #E9D5FF
+$Color-Purple-300: rgb(216, 180, 254); // #D8B4FE
+$Color-Purple-400: rgb(192, 132, 252); // #C084FC
+$Color-Purple-500: rgb(168, 85, 247); // #A855F7
+$Color-Purple-600: rgb(147, 51, 234); // #9333EA
+$Color-Purple-700: rgb(126, 34, 206); // #7E22CE
+$Color-Purple-800: rgb(107, 33, 168); // #6B21A8
+$Color-Purple-900: rgb(88, 28, 135); // #581C87
+$Color-Purple-950: rgb(59, 07, 100); // #3B0764
+
+/* FUCHSIA */
+$Color-Fuchsia-50: rgb(253, 244, 255); // #FDF4FF
+$Color-Fuchsia-100: rgb(250, 232, 255); // #FAE8FF
+$Color-Fuchsia-200: rgb(245, 208, 254); // #F5F0FE
+$Color-Fuchsia-300: rgb(240, 171, 252); // #F0ABFC
+$Color-Fuchsia-400: rgb(232, 121, 249); // #E879F9
+$Color-Fuchsia-500: rgb(217, 70, 239); // #D946EF
+$Color-Fuchsia-600: rgb(192, 38, 211); // #C026D3
+$Color-Fuchsia-700: rgb(162, 28, 175); // #A21CAF
+$Color-Fuchsia-800: rgb(134, 25, 143); // #86198F
+$Color-Fuchsia-900: rgb(112, 26, 117); // #701A75
+$Color-Fuchsia-950: rgb(74, 04, 78); // #4A044E
+
+/* PINK */
+$Color-Pink-50: rgb(253, 242, 248); // #FDF2F8
+$Color-Pink-100: rgb(252, 231, 243); // #FCE7F3
+$Color-Pink-200: rgb(251, 207, 232); // #FBCFE8
+$Color-Pink-300: rgb(249, 168, 212); // #F9A8D4
+$Color-Pink-400: rgb(244, 114, 182); // #F472B6
+$Color-Pink-500: rgb(236, 72, 153); // #EC4899
+$Color-Pink-600: rgb(219, 39, 119); // #DB2777
+$Color-Pink-700: rgb(190, 24, 93); // #BE185D
+$Color-Pink-800: rgb(157, 23, 77); // #9D174D
+$Color-Pink-900: rgb(131, 24, 67); // #831843
+$Color-Pink-950: rgb(80, 07, 36); // #500724
+
+/* ROSE */
+$Color-Rose-50: rgb(255, 241, 242); // #FFF1F2
+$Color-Rose-100: rgb(255, 228, 230); // #FFE4E6
+$Color-Rose-200: rgb(254, 205, 211); // #FECDD3
+$Color-Rose-300: rgb(253, 164, 175); // #FDA4AF
+$Color-Rose-400: rgb(251, 113, 133); // #FB7185
+$Color-Rose-500: rgb(244, 63, 94); // #F43F5E
+$Color-Rose-600: rgb(225, 29, 72); // #E11D48
+$Color-Rose-700: rgb(190, 18, 60); // #BE123C
+$Color-Rose-800: rgb(159, 18, 57); // #9F1239
+$Color-Rose-900: rgb(136, 19, 55); // #881337
+$Color-Rose-950: rgb(76, 05, 25); // #4C0519
+
+/* SCREEN SIZES */
+$Screen-Small: 640px; // => @media (min-width: 640px) { ... }
+$Screen-Medium: 768px; // => @media (min-width: 768px) { ... }
+$Screen-Large: 1024px; // => @media (min-width: 1024px) { ... }
+$Screen-XL: 1280px; // => @media (min-width: 1280px) { ... }
+$Screen-XXL: 1536px; // => @media (min-width: 1536px) { ... }
+
+/* LIGHT THEME */
+
+/* TEXT */
+$Theme-Light-Text-About-Page-Link-Hover: $Color-Pink-500;
+$Theme-Light-Text-Archive-Toggle: $Color-Neutral-600;
+$Theme-Light-Text-Blog-Item-Title: $Color-Neutral-900;
+$Theme-Light-Text-Blog-Item-Subtitle: $Color-Neutral-700;
+$Theme-Light-Text-Certificate-Description: $Color-Neutral-800;
+$Theme-Light-Text-Filter-Message: $Color-Neutral-600;
+$Theme-Light-Text-Filter-Name: $Color-Neutral-500;
+$Theme-Light-Text-Heading-Two: $Color-Pink-500;
+$Theme-Light-Text-Heading-Four: $Color-Pink-500;
+$Theme-Light-Text-Homepage-Hero-Welcome: $Color-Neutral-600;
+$Theme-Light-Text-Navigation: $Color-Neutral-900;
+$Theme-Light-Text-Navigation-Hover: $Color-Neutral-600;
+$Theme-Light-Text-Page-Navigation-Item-Description: $Color-Neutral-700;
+$Theme-Light-Text-Page-Navigation-Item-Label: $Color-Neutral-900;
+$Theme-Light-Text-Page-Not-Found: $Color-Neutral-900;
+$Theme-Light-Text-Primary: $Color-Neutral-900;
+$Theme-Light-Text-Project-Item-Description: $Color-Neutral-600;
+$Theme-Light-Text-Project-Key-Description: $Color-Neutral-800;
+$Theme-Light-Text-Project-Item-Title-Hover: $Color-Pink-500;
+$Theme-Light-Text-Prose: $Color-Grey-700;
+$Theme-Light-Text-Tag: $Color-Grey-500;
+$Theme-Light-Text-Title-Page-Not-Found: $Color-Pink-500;
+
+/* BACKGROUND */
+$Theme-Light-Background-Accordion: $Color-White;
+$Theme-Light-Background-Blog-Item: $Color-Neutral-100;
+$Theme-Light-Background-Blog-Item-Hover: $Color-Neutral-200;
+$Theme-Light-Background-Certificate-Image: $Color-Neutral-100;
+$Theme-Light-Background-Filter-Section: $Color-White;
+$Theme-Light-Background-Header: rgba(250, 250, 250, 0);
+$Theme-Light-Background-Navigation-Hover: $Color-Pink-500;
+$Theme-Light-Background-Page-Navigation-Item: $Color-Neutral-100;
+$Theme-Light-Background-Page-Navigation-Item-Desktop: $Color-Neutral-200;
+$Theme-Light-Background-Primary: $Color-White;
+$Theme-Light-Background-Role-Skills: $Color-Neutral-300;
+$Theme-Light-Background-Role-Skills-Hover: $Color-Neutral-300;
+$Theme-Light-Background-Tag: $Color-Grey-200;
+$Theme-Light-Background-Video-Player: $Color-Neutral-100;
+
+$Theme-Light-Button-Background-Primary: $Color-Neutral-100;
+$Theme-Light-Button-Background-Primary-Hover: $Color-Neutral-100;
+$Theme-Light-Button-Background-Secondary: hsl(0, 0%, 96.1%);
+$Theme-Light-Button-Background-Secondary-Hover: rgba(245, 245, 245, 0.8);
+$Theme-Light-Button-Background-Destructive: hsl(330, 84%, 60%);
+$Theme-Light-Button-Background-Destructive-Hover: rgba(239, 67, 153, 0.9);
+$Theme-Light-Button-Background-Filled: $Color-Pink-500;
+$Theme-Light-Button-Background-Ghost: transparent;
+$Theme-Light-Button-Background-Ghost-Hover: $Color-Pink-400;
+$Theme-Light-Button-Background-Gradient-Start: $Color-Pink-600;
+$Theme-Light-Button-Background-Gradient-End: $Color-Pink-400;
+$Theme-Light-Button-Background-Outline-Hover: $Color-Pink-400;
+
+$Theme-Light-Button-Text-Primary: $Color-Neutral-700;
+$Theme-Light-Button-Text-Primary-Hover: $Color-Neutral-700;
+$Theme-Light-Button-Text-Secondary: hsl(0, 0%, 09%);
+$Theme-Light-Button-Text-Destructive: hsl(0, 20%, 95%);
+$Theme-Light-Button-Text-Filled: $Color-Neutral-100;
+$Theme-Light-Button-Text-Ghost: $Color-Pink-400;
+$Theme-Light-Button-Text-Ghost-Hover: $Color-Neutral-100;
+$Theme-Light-Button-Text-Gradient: $Color-Neutral-100;
+$Theme-Light-Button-Text-Home-Hover: $Color-Pink-500;
+$Theme-Light-Button-Text-Link: hsl(0, 0%, 09%);
+$Theme-Light-Button-Text-Outline: $Color-Pink-500;
+$Theme-Light-Button-Text-Outline-Hover: $Color-Neutral-100;
+
+/* BORDER */
+$Theme-Light-Border-Accordion: $Color-Neutral-200;
+$Theme-Light-Border-Accordion-Hover: $Color-Neutral-300;
+$Theme-Light-Border-Blog-Item: $Color-Neutral-300;
+$Theme-Light-Border-Blog-Item-Hover: $Color-Neutral-400;
+$Theme-Light-Border-Button-Outline: $Color-Pink-500;
+$Theme-Light-Border-Button-Primary: $Color-Neutral-300;
+$Theme-Light-Border-Button-Primary-Hover: $Color-Pink-500;
+$Theme-Light-Border-Filter-Button: $Color-Neutral-300;
+$Theme-Light-Border-Page-Navigation-Item: $Color-Neutral-200;
+$Theme-Light-Border-Page-Navigation-Item-Hover: $Color-Neutral-400;
+$Theme-Light-Border-Project-Cover-Image: $Color-Zinc-50;
+$Theme-Light-Border-Project-No-Cover-Image: $Color-Pink-400;
+$Theme-Light-Border-Related-Skills-Section: $Color-Grey-200;
+$Theme-Light-Border-Tag: $Color-Grey-200;
+$Theme-Light-Border-Tag-Hover: $Color-Grey-400;
+
+/* ICON */
+$Theme-Light-Icon-Button-Background: transparent;
+$Theme-Light-Icon-Button-Background-Hover: $Color-Neutral-200;
+$Theme-Light-Icon-Button-Border: $Color-Neutral-800;
+$Theme-Light-Icon-Filter-Close: $Color-Neutral-800;
+$Theme-Light-Icon-Filter-Close-Hover: $Color-Pink-500;
+$Theme-Light-Icon-Filter-Section: $Color-Neutral-700;
+$Theme-Light-Icon-Loading: $Color-Black;
+$Theme-Light-Icon-Search: $Color-Neutral-600;
+$Theme-Light-Icon-Social: $Color-Neutral-600;
+$Theme-Light-Icon-Text: $Color-Neutral-800;
+
+/* FOOTER */
+$Theme-Light-Footer-Divider: $Color-Neutral-200;
+$Theme-Light-Footer-Text-Primary: $Color-Neutral-900;
+$Theme-Light-Footer-Text-Secondary: $Color-Neutral-500;
+
+/* DARK THEME */
+
+/* TEXT */
+$Theme-Dark-Text-About-Page-Link-Hover: $Color-Pink-700;
+$Theme-Dark-Text-Archive-Toggle: $Color-Neutral-400;
+$Theme-Dark-Text-Blog-Item-Title: $Color-Neutral-100;
+$Theme-Dark-Text-Blog-Item-Subtitle: $Color-Neutral-300;
+$Theme-Dark-Text-Certificate-Description: $Color-Neutral-300;
+$Theme-Dark-Text-Filter-Message: $Color-Neutral-400;
+$Theme-Dark-Text-Filter-Name: $Color-Neutral-400;
+$Theme-Dark-Text-Heading-Two: $Color-Pink-500;
+$Theme-Dark-Text-Heading-Four: $Color-Grey-300;
+$Theme-Dark-Text-Homepage-Hero-Welcome: $Color-Neutral-300;
+$Theme-Dark-Text-Navigation: $Color-Neutral-100;
+$Theme-Dark-Text-Navigation-Hover: $Color-Pink-100;
+$Theme-Dark-Text-Page-Navigation-Item-Description: $Color-Neutral-300;
+$Theme-Dark-Text-Page-Navigation-Item-Label: $Color-Neutral-100;
+$Theme-Dark-Text-Page-Not-Found: $Color-Neutral-100;
+$Theme-Dark-Text-Primary: $Color-Neutral-100;
+$Theme-Dark-Text-Project-Item-Description: $Color-Neutral-400;
+$Theme-Dark-Text-Project-Key-Description: $Color-Neutral-300;
+$Theme-Dark-Text-Project-Item-Title-Hover: $Color-Pink-800;
+$Theme-Dark-Text-Prose: $Color-Grey-300;
+$Theme-Dark-Text-Tag: $Color-Grey-300;
+$Theme-Dark-Text-Title-Page-Not-Found: $Color-Pink-700;
+
+/* BACKGROUND */
+$Theme-Dark-Background-Accordion: $Color-Neutral-950;
+$Theme-Dark-Background-Blog-Item: $Color-Neutral-800;
+$Theme-Dark-Background-Blog-Item-Hover: $Color-Pink-950;
+$Theme-Dark-Background-Certificate-Image: $Color-Neutral-950;
+$Theme-Dark-Background-Filter-Section: $Color-Black;
+$Theme-Dark-Background-Header: rgba(23, 23, 23, 0.6);
+$Theme-Dark-Background-Navigation-Hover: $Color-Pink-900;
+$Theme-Dark-Background-Page-Navigation-Item: $Color-Neutral-800;
+$Theme-Dark-Background-Page-Navigation-Item-Desktop: $Color-Pink-950;
+$Theme-Dark-Background-Primary: $Color-Neutral-900;
+$Theme-Dark-Background-Role-Skills: $Color-Neutral-800;
+$Theme-Dark-Background-Role-Skills-Hover: $Color-Pink-800;
+$Theme-Dark-Background-Tag: $Color-Pink-950;
+$Theme-Dark-Background-Video-Player: $Color-Neutral-900;
+
+$Theme-Dark-Button-Background-Primary: $Color-Neutral-800;
+$Theme-Dark-Button-Background-Primary-Hover: $Color-Neutral-800;
+$Theme-Dark-Button-Background-Secondary: hsl(0, 0%, 14.9%);
+$Theme-Dark-Button-Background-Secondary-Hover: rgba(38, 38, 38, 0.8);
+$Theme-Dark-Button-Background-Destructive: hsl(330, 84%, 60%);
+$Theme-Dark-Button-Background-Destructive-Hover: rgba(239, 67, 153, 0.9);
+$Theme-Dark-Button-Background-Filled: $Color-Pink-800;
+$Theme-Dark-Button-Background-Ghost: transparent;
+$Theme-Dark-Button-Background-Ghost-Hover: $Color-Pink-700;
+$Theme-Dark-Button-Background-Gradient-Start: $Color-Pink-800;
+$Theme-Dark-Button-Background-Gradient-End: $Color-Pink-600;
+$Theme-Dark-Button-Background-Outline-Hover: $Color-Pink-900;
+
+$Theme-Dark-Button-Text-Primary: $Color-Neutral-200;
+$Theme-Dark-Button-Text-Primary-Hover: $Color-Neutral-200;
+$Theme-Dark-Button-Text-Secondary: hsl(0, 0%, 98%);
+$Theme-Dark-Button-Text-Destructive: hsl(0, 20%, 95%);
+$Theme-Dark-Button-Text-Filled: $Color-Neutral-100;
+$Theme-Dark-Button-Text-Ghost: $Color-Pink-700;
+$Theme-Dark-Button-Text-Ghost-Hover: $Color-Neutral-100;
+$Theme-Dark-Button-Text-Gradient: $Color-Neutral-100;
+$Theme-Dark-Button-Text-Home-Hover: $Color-Pink-800;
+$Theme-Dark-Button-Text-Link: hsl(0, 0%, 98%);
+$Theme-Dark-Button-Text-Outline: $Color-Pink-500;
+$Theme-Dark-Button-Text-Outline-Hover: $Color-Neutral-100;
+
+/* BORDER */
+$Theme-Dark-Border-Accordion: $Color-Neutral-800;
+$Theme-Dark-Border-Accordion-Hover: $Color-Neutral-700;
+$Theme-Dark-Border-Blog-Item: $Color-Neutral-700;
+$Theme-Dark-Border-Blog-Item-Hover: $Color-Pink-500;
+$Theme-Dark-Border-Button-Outline: $Color-Pink-900;
+$Theme-Dark-Border-Button-Primary: $Color-Neutral-700;
+$Theme-Dark-Border-Button-Primary-Hover: $Color-Pink-800;
+$Theme-Dark-Border-Filter-Button: $Color-Neutral-700;
+$Theme-Dark-Border-Page-Navigation-Item: $Color-Neutral-700;
+$Theme-Dark-Border-Page-Navigation-Item-Hover: $Color-Pink-500;
+$Theme-Dark-Border-Project-Cover-Image: $Color-Neutral-900;
+$Theme-Dark-Border-Project-No-Cover-Image: $Color-Pink-900;
+$Theme-Dark-Border-Related-Skills-Section: $Color-Neutral-600;
+$Theme-Dark-Border-Tag: $Color-Pink-950;
+$Theme-Dark-Border-Tag-Hover: $Color-Pink-900;
+
+/* ICON */
+$Theme-Dark-Icon-Button-Background: transparent;
+$Theme-Dark-Icon-Button-Background-Hover: $Color-Neutral-800;
+$Theme-Dark-Icon-Button-Border: $Color-Neutral-800;
+$Theme-Dark-Icon-Filter-Close: $Color-Neutral-400;
+$Theme-Dark-Icon-Filter-Close-Hover: $Color-Pink-500;
+$Theme-Dark-Icon-Filter-Section: $Color-Neutral-200;
+$Theme-Dark-Icon-Loading: $Color-White;
+$Theme-Dark-Icon-Search: $Color-Neutral-400;
+$Theme-Dark-Icon-Social: $Color-Neutral-300;
+$Theme-Dark-Icon-Text: $Color-Neutral-100;
+
+/* FOOTER */
+$Theme-Dark-Footer-Divider: $Color-Neutral-700;
+$Theme-Dark-Footer-Text-Primary: $Color-Neutral-900;
+$Theme-Dark-Footer-Text-Secondary: $Color-Neutral-100;

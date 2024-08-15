@@ -1,0 +1,156 @@
+@use '../../../SASS/Variables' as *;
+
+.Project {
+	background-color: var(--Background-Project-Item);
+	border-radius: 0.75rem;
+	padding: 1rem;
+
+	@media (min-width: $Screen-Large) {
+		background-color: transparent;
+		box-shadow:
+			0 4px 6px -1px rgb(0, 0, 0, 0.1),
+			0 2px 4px -2px rgb(0, 0, 0, 0.1);
+		padding: 0;
+		transition: color 700ms;
+	}
+
+	@media (min-width: $Screen-Medium) {
+		border-width: 0;
+		box-shadow: 0 0 #0000;
+	}
+
+	@media (min-width: $Screen-Large) {
+		border: 0 solid var(--Border-Project-Item);
+		box-shadow: 0 0 #0000;
+	}
+}
+
+.Project-Container {
+	display: flex;
+	flex-direction: column;
+
+	@media (min-width: $Screen-Large) {
+		flex-direction: row;
+
+		& > * + * {
+			margin-left: 3rem;
+		}
+	}
+}
+
+.Project-Cover {
+	border-radius: 0.75rem;
+	box-shadow:
+		0 20px 25px -5px rgb(0, 0, 0, 0.1),
+		0 8px 10px -6px rgb(0, 0, 0, 0.1);
+	transition: all 500ms ease-in-out;
+
+	@media (min-width: $Screen-Large) {
+		width: 50%;
+
+		&:Hover {
+			box-shadow: 0 25px 50px -12px rgb(0, 0, 0, 0.25);
+			transform: scale(1.05);
+		}
+	}
+}
+
+.Project-Aspect-Ratio {
+	overflow: hidden;
+	position: relative;
+}
+
+.Project-Cover-Image {
+	border: 1px solid var(--Border-Project-Cover-Image);
+	border-radius: 0.75rem;
+	cursor: pointer;
+	object-fit: cover;
+}
+
+.Project-No-Cover {
+	border-color: var(--Border-Project-No-Cover-Image);
+	border-left-width: 4px;
+	border-radius: 0.75rem;
+	height: 110%;
+	transition: all 500ms ease-in-out
+}
+
+.Project-Cover-Container {
+	margin-top: 2rem;
+}
+
+.Project-Image {
+	@media (min-width: $Screen-Large) {
+		width: 50%;
+	}
+}
+
+.Project-Image-Full {
+	@media (min-width: $Screen-Large) {
+		width: 10%;
+	}
+}
+
+.Project-Title {
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	font-size: 1.875rem;
+	font-weight: 700;
+	justify-content: center;
+	line-height: 2.25rem;
+	margin-bottom: 1.5rem;
+	text-align: center;
+	transition: color 700ms ease-in-out;
+
+	@media (min-width: $Screen-Medium) {
+		align-items: flex-start;
+		font-size: 2.25rem;
+		line-height: 2.5rem;
+		text-align: left;
+
+		&:Hover {
+			color: var(--Text-Project-Item-Title-Hover);
+		}
+	}
+}
+
+.Project-Description {
+	color: var(--Text-Project-Item-Description);
+	font-size: 1.25rem;
+	line-height: 1.75rem;
+	margin-bottom: 1rem;
+	text-align: center;
+
+	@media (min-width: $Screen-Medium) {
+		text-align: left;
+	}
+}
+
+.Project-Buttons {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	margin-top: 2rem;
+	vertical-align: bottom;
+
+	& > * + * {
+		margin-left: 1rem
+	}
+
+	@media (min-width: $Screen-Medium) {
+		justify-content: flex-start;
+	}
+}
+
+.Project-Info-Icon {
+	cursor: pointer;
+
+	@media (min-width: $Screen-Medium) {
+		transition: transform 300ms ease;
+
+		&:Hover {
+			transform: translateY(-1px);
+		}
+	}
+}

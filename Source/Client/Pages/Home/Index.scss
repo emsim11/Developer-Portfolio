@@ -1,0 +1,32 @@
+@use '../../SASS/Mixins' as *;
+@use '../../SASS/Variables' as *;
+
+.Home {
+	border-width: 0;
+	clip: rect(0, 0, 0, 0);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	white-space: nowrap;
+	width: 1px;
+
+	@media (min-width: $Screen-Large) {
+		width: 100%;
+	}
+}
+
+.Home-About-Section {
+	@media (min-width: $Screen-Large) {
+		font-size: 1.125rem;
+    	line-height: 1.75;
+	}
+}
+
+.Home-Container {
+	@include Fade-In(0.2s);
+	display: flex;
+	flex-direction: column;
+	margin-top: 5rem;
+}

@@ -1,0 +1,33 @@
+.Work-List {
+	display: flex;
+	flex-direction: column;
+
+	& > * + * {
+		margin-top: 1.25rem;
+	}
+}
+
+.Work-List-Title {
+	/* border-b border-gray-200 dark:border-neutral-600 pb-1 */
+}
+
+.Work-List-Container {
+	& > * + * {
+		margin-top: 2.5rem;
+	}
+}
+
+.Work-List-Role {
+	/* animate-slideUpCubiBezier animation-delay-1 */
+}
+
+.Work-List-Nothing-Found {
+	display: flex;
+	justify-content: center;
+	min-width: 100%;
+	/* mt-8 */
+}
+
+.Work-List-Nothing-Found-Title {
+	/* text-2xl font-bold */
+}

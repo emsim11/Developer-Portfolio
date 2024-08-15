@@ -1,0 +1,23 @@
+@use '../../../SASS/Mixins' as *;
+
+.Blog-Page {
+	@include Screen-Reader;
+}
+
+.Blog-Page-Content {
+	text-align: center;
+}
+
+.Blog-Page-Content-Subtitle {
+	/* text-neutral-600 dark:text-neutral-400 */
+}
+
+.Blog-Page-Content-Text {
+	border-bottom-width: 1px;
+	padding-bottom: 0.5rem;
+	/* border-b border-gray-200 dark:border-neutral-600 pb-2 */
+}
+
+.Blog-Page-Skills {
+	margin-top: 1rem;
+}

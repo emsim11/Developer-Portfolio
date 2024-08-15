@@ -1,0 +1,168 @@
+@use './Variables' as *;
+
+/* BOX SIZING RULES */
+*,
+*::Before,
+*::After {
+	box-sizing: border-box;
+	border: 0 solid var(--Color-Gray-200);
+}
+
+HTML {
+	-webkit-text-size-adjust: 100%;
+	line-height: 1.15;
+	max-width: 100%;
+}
+
+/* REMOVE LIST STYLES ON OL, UL ELEMENTS WITH LIST ROLE, WHICH SUGGEST DEFAULT STYLING WILL BE REMOVED */
+UL[Role='list'],
+OL[Role='list'] {
+  	list-style: none;
+}
+
+/* SET CORE BODY DEFAULTS */
+Body {
+	color: var(--Color-Black);
+	font-family: 'General-Sans', sans-serif;
+	line-height: inherit;
+  	margin: 0;
+	min-height: 100vh;
+	overflow-x: hidden;
+	transition: color, background-color, 0.6s ease;
+}
+
+/* SET SHORTER LINE HEIGHTS ON HEADINGS AND INTERACTIVE ELEMENTS */
+Button,
+H1,
+H2,
+H3,
+H4,
+Input,
+Label {
+  	line-height: 1.1;
+}
+
+/* ANCHOR ELEMENTS THAT DON'T HAVE A CLASS GET DEFAULT STYLES */
+// A:Not([Class]) {
+// 	color: CurrentColor;
+//   	text-decoration-skip-ink: auto;
+// }
+
+A {
+	background-color: transparent;
+	color: inherit;
+	text-decoration: inherit;
+}
+
+B,
+Strong {
+	font-weight: bolder;
+}
+
+[role=button],
+Button {
+	cursor: pointer;
+}
+
+/* MAKE IMAGES EASIER TO WORK WITH */
+Img,
+Picture {
+	height: auto;
+	max-width: 100%;
+}
+
+/* INHERIT FONTS FOR INPUTS AND BUTTONS */
+Button,
+Input,
+OptGroup,
+Select,
+TextArea {
+	color: inherit;
+	font-family: inherit;
+	font-size: 100%;
+	font-weight: inherit;
+	line-height: inherit;
+	margin: 0;
+	padding: 0;
+}
+
+/* ENSURE TEXT AREAS WITHOUT A ROW'S ATTRIBUTE ARE NOT TINY */
+TextArea:Not([Rows]) {
+  	min-height: 10em;
+}
+
+/* ANYTHING THAT HAS BEEN ANCHORED TO SHOULD HAVE EXTRA SCROLL MARGIN */
+:Target {
+	scroll-margin-block: 5ex;
+}
+
+HR {
+	border-top-style: inset;
+	border-top-width: 1px;
+	color: inherit;
+	display: block;
+	margin-block-end: 0.5em;
+	margin-block-start: 0.5em;
+	margin-inline-end: auto;
+	margin-inline-start: auto;
+	overflow-x: hidden;
+	overflow-y: hidden;
+	unicode-bidi: isolate;
+}
+
+Ol,
+Ul {
+	list-style: none;
+}
+
+[type=button],
+[type=reset],
+[type=submit],
+Button {
+	appearance: button;
+	background-color: transparent;
+	background-image: none;
+	-webkit-appearance: button;
+}
+
+Button,
+Select {
+	text-transform: none;
+}
+
+audio,
+canvas,
+embed,
+iframe,
+img,
+object,
+svg,
+video {
+	vertical-align: middle;
+}
+
+H1,
+H2,
+H3,
+H4,
+H5,
+H6 {
+	font-size: inherit;
+	font-weight: inherit;
+}
+
+Blockquote,
+DD,
+DL,
+Figure,
+H1,
+H2,
+H3,
+H4,
+H5,
+H6,
+HR,
+P,
+Pre {
+	margin: 0;
+}

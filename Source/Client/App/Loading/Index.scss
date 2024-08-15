@@ -1,0 +1,22 @@
+@use '../../SASS/Mixins' as *;
+@use '../../SASS/Variables' as *;
+
+.Loading {
+	height: 40px;
+	left: 50%;
+	position: absolute;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	width: 40px;
+}
+
+.Loading Span {
+	animation: Spin 800ms linear infinite;
+	border: 3px solid transparent;
+	border-radius: 50%;
+	border-right-color: var(--Icon-Loading);
+	display: block;
+	height: 40px;
+	opacity: 0.7;
+	width: 40px;
+}

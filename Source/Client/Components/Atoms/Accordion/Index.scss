@@ -1,0 +1,75 @@
+@use '../../../SASS/Mixins' as *;
+@use '../../../SASS/Variables' as *;
+
+.Accordion-Item {
+	background-color: var(--Background-Accordion);
+	border: 1px solid var(--Border-Accordion);
+	border-radius: 0.75rem;
+	box-shadow: 0 1px 2px 0 rgb(0, 0, 0, 0.05);
+	margin-top: 0.75rem;
+	padding: 0.25rem 0.75rem;
+	transition: all 500ms ease-in-out;
+
+	&:Hover {
+		border: 1px solid var(--Border-Accordion-Hover);
+		box-shadow:
+			0 4px 6px -1px rgb(0, 0, 0, 0.1),
+			0 2px 4px -2px rgb(0, 0, 0, 0.1);
+	}
+}
+
+.Accordion-Header {
+	display: flex;
+}
+
+.Accordion-Trigger {
+	align-items: center;
+	display: flex;
+	flex: 1 1 0%;
+	font-weight: 500;
+	justify-content: space-between;
+	padding-bottom: 1rem;
+	padding-top: 1rem;
+	transition: all 150ms cubic-bezier(0.4, 0, 0.2, 1);
+
+	// SVG {
+	// 	& [data-state='open'] {
+	// 		transform: rotate(180deg);
+	// 	}
+	// }
+
+	&:Hover {
+		text-decoration: underline;
+	}
+}
+
+.Accordion-Trigger-Icon {
+	animation-duration: 0.2s;
+	flex-shrink: 0;
+	height: 1rem;
+	transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+	width: 1rem;
+
+	& [data-state='open'] > svg {
+		// @include Accordion-Down;
+		transition: rotate(180deg);
+	}
+
+	&[data-state='closed'] > svg {
+		// @include Accordion-Up;
+		transition: rotate(180deg);
+	}
+}
+
+.Accordion-Content {
+	font-size: 0.875rem;
+	line-height: 1.25rem;
+	overflow: hidden;
+	transition: all 150ms cubic-bezier(0.4, 0, 0.2, 1);
+
+}
+
+.Accordion-Content-Container {
+	padding-bottom: 1rem;
+	padding-top: 0;
+}

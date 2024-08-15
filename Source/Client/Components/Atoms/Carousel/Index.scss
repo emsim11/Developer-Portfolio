@@ -1,0 +1,86 @@
+@use '../../../SASS/Mixins' as *;
+
+.Carousel {
+	position: relative;
+}
+
+.Carousel-Content {
+	overflow: hidden;
+}
+
+.Carousel-Content-Container {
+	display: flex;
+}
+
+.Carousel-Content-Horizontal {
+	margin-left: -1rem;
+}
+
+.Carousel-Content-Vertical {
+	flex-direction: column;
+	margin-top: -1rem;
+}
+
+.Carousel-Item {
+	flex-basis: 100%;
+	flex-grow: 0;
+	flex-shrink: 0;
+	min-width: 0;
+}
+
+.Carousel-Item-Horizontal {
+	padding-left: 1rem;
+}
+
+.Carousel-Item-Vertical {
+	padding-top: 1rem;
+}
+
+.Carousel-Previous {
+	border-radius: 9999px;
+	height: 2rem;
+	position: absolute;
+	width: 2rem;
+}
+
+.Carousel-Previous-Horizontal {
+	left: -3rem;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.Carousel-Previous-Vertical {
+	left: 50%;
+	top: -3rem;
+	transform: rotate(90deg);
+	transform: translateX(-50%);
+}
+
+.Carousel-Arrow {
+	height: 1rem;
+	width: 1rem;
+}
+
+.Carousel-Span {
+	@include Screen-Reader;
+}
+
+.Carousel-Next {
+	border-radius: 9999px;
+	height: 2rem;
+	position: absolute;
+	width: 2rem;
+}
+
+.Carousel-Next-Horizontal {
+	right: -3rem;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.Carousel-Next-Vertical {
+	bottom: -3rem;
+	left: 50%;
+	transform: rotate(90deg);
+	transform: translateX(-50%);
+}

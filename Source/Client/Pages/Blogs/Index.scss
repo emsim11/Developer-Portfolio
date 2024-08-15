@@ -1,0 +1,11 @@
+@use '../../SASS/Mixins' as *;
+
+.Blogs-Page {
+	@include Screen-Reader;
+}
+
+.Blogs {
+	@include Fade-In(0ms);
+	min-height: 85vh;
+	width: 100%;
+}

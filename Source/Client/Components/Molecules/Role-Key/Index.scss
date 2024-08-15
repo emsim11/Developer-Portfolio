@@ -1,0 +1,98 @@
+@use '../../../SASS/Mixins' as *;
+@use '../../../SASS/Variables' as *;
+
+.Role-Key {
+	@include Screen-Reader;
+}
+
+.Role-Key-Skills {
+	align-items: center;
+	display: flex;
+	justify-content: center;
+}
+
+.Role-Key-Skills-Container {
+	background-color: var(--Background-Role-Skills);
+	border-radius: 9999px;
+	box-shadow:
+		0 10px 15px -3px rgb(0 0 0 / 0.1),
+		0 4px 6px -4px rgb(0 0 0 / 0.1);
+	height: 90px;
+	padding: 0.375rem;
+	transition: all 500ms ease-in-out;
+	width: 90px;
+
+	&:Hover {
+		background-color: var(--Background-Role-Skills);
+		box-shadow:
+			0 20px 25px -5px rgb(0 0 0 / 0.1),
+			0 8px 10px -6px rgb(0 0 0 / 0.1);
+		transform: scale(1.05);
+	}
+}
+
+.Role-Key-Aspect-Ratio {
+	background-color: rgb(255 255 255);
+	border-radius: 9999px;
+	overflow: hidden;
+	position: relative;
+	width: 100%;
+}
+
+.Role-Key-Company-Logo {
+	border-radius: 9999px;
+	box-shadow:
+		0 10px 15px -3px rgb(0 0 0 / 0.1),
+		0 4px 6px -4px rgb(0 0 0 / 0.1);
+	object-fit: cover;
+	transition: all 500ms ease-in-out;
+}
+
+.Role-Key-Details {
+	& > * + * {
+		margin-top: 4rem;
+	}
+}
+
+.Role-Key-Details-Container {
+	& > * + * {
+		margin-top: 1rem;
+	}
+}
+
+.Role-Key-Details-Text {
+	text-align: center;
+
+	@media (min-width: $Screen-Large) {
+		text-align: left;
+	}
+}
+
+.Role-Key-Company-Website {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+
+	@media (min-width: $Screen-Medium) {
+		justify-content: flex-start;
+	}
+}
+
+.Role-Key-Company-Website-Icon {
+	display: flex;
+	gap: 1rem;
+	justify-content: center;
+	text-align: center;
+	width: 100%;
+
+	@media (min-width: $Screen-Medium) {
+		justify-content: flex-start;
+	}
+}
+
+.Role-Key-Materials-Divider {
+	border-color: var(--Border-Related-Skills-Section);
+	border-bottom-width: 1px;
+	padding-bottom: 0.75rem;
+	padding-top: 0.5rem;
+}

@@ -1,0 +1,31 @@
+.Overlay-Container {
+	backdrop-filter: blur(24px);
+	background-color: var(--Color-White);
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+	justify-content: space-between;
+	opacity: 0.6;
+	overflow-y: auto;
+	position: fixed;
+	right: 0;
+	top: 0;
+	transform: translateX(100%);
+	transition: all 700ms ease-in-out;
+	width: 100%;
+	z-index: 40;
+
+	&.Dark {
+		background-color: var(--Color-Neutral-900);
+		opacity: 0.6;
+	}
+}
+
+.Open {
+	transform: translateX(0px);
+}
+
+.Closed {
+	display: none;
+	transform: translateX(100%);
+}

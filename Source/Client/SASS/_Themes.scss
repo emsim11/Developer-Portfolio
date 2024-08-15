@@ -1,0 +1,233 @@
+@use 'sass:color';
+@use './Color-Palette' as *;
+@use './Variables' as *;
+
+@mixin Light-Theme {
+	/* TEXT */
+	--Text-About-Page-Link-Hover: #{$Theme-Light-Text-About-Page-Link-Hover};
+	--Text-Archive-Toggle: #{$Theme-Light-Text-Archive-Toggle};
+	--Text-Blog-Item-Title: #{$Theme-Light-Text-Blog-Item-Title};
+	--Text-Blog-Item-Subtitle: #{$Theme-Light-Text-Blog-Item-Subtitle};
+	--Text-Certificate-Description: #{$Theme-Light-Text-Certificate-Description};
+	--Text-Filter-Message: #{$Theme-Light-Text-Filter-Message};
+	--Text-Filter-Name: #{$Theme-Dark-Text-Filter-Name};
+	--Text-Heading-Two: #{$Theme-Light-Text-Heading-Two};
+	--Text-Heading-Four: #{$Theme-Light-Text-Heading-Four};
+	--Text-Homepage-Hero-Welcome: #{$Theme-Light-Text-Homepage-Hero-Welcome};
+	--Text-Navigation: #{$Theme-Light-Text-Navigation};
+	--Text-Navigation-Hover: #{$Theme-Light-Text-Navigation-Hover};
+	--Text-Page-Navigation-Item-Description: #{$Theme-Light-Text-Page-Navigation-Item-Description};
+	--Text-Page-Navigation-Item-Label: #{$Theme-Light-Text-Page-Navigation-Item-Label};
+	--Text-Page-Not-Found: #{$Theme-Light-Text-Page-Not-Found};
+	--Text-Primary: #{$Theme-Light-Text-Primary};
+	--Text-Project-Item-Description: #{$Theme-Light-Text-Project-Item-Description};
+	--Text-Project-Key-Description: #{$Theme-Light-Text-Project-Key-Description};
+	--Text-Project-Item-Title-Hover: #{$Theme-Light-Text-Project-Item-Title-Hover};
+	--Text-Prose: #{$Theme-Light-Text-Prose};
+	--Text-Tag: #{$Theme-Light-Text-Tag};
+	--Text-Title-Page-Not-Found: #{$Theme-Light-Text-Title-Page-Not-Found};
+
+	/* BACKGROUND */
+	--Background-Primary: #{$Theme-Light-Background-Primary};
+	--Background-Accordion: #{$Theme-Light-Background-Accordion};
+	--Background-Blog-Item: #{$Theme-Light-Background-Blog-Item};
+	--Background-Blog-Item-Hover: #{$Theme-Light-Background-Blog-Item-Hover};
+	--Background-Certificate-Image: #{$Theme-Light-Background-Certificate-Image};
+	--Background-Filter-Section: #{$Theme-Light-Background-Filter-Section};
+	--Background-Header: #{$Theme-Light-Background-Header};
+	--Background-Navigation-Hover: #{$Theme-Light-Background-Navigation-Hover};
+	--Background-Page-Navigation-Item: #{$Theme-Light-Background-Page-Navigation-Item};
+	--Background-Page-Navigation-Item-Desktop: #{$Theme-Light-Background-Page-Navigation-Item-Desktop};
+	--Background-Role-Skills: #{$Theme-Light-Background-Role-Skills};
+	--Background-Role-Skills-Hover: #{$Theme-Light-Background-Role-Skills-Hover};
+	--Background-Tag: #{$Theme-Light-Background-Tag};
+	--Background-Video-Player: #{$Theme-Light-Background-Video-Player};
+
+	/* BUTTON BACKGROUND */
+	--Button-Background-Primary: #{$Theme-Light-Button-Background-Primary};
+	--Button-Background-Primary-Hover: #{$Theme-Light-Button-Background-Primary-Hover};
+	--Button-Background-Secondary: #{$Theme-Light-Button-Background-Secondary};
+	--Button-Background-Secondary-Hover: #{$Theme-Light-Button-Background-Secondary-Hover};
+	--Button-Background-Destructive: #{$Theme-Light-Button-Background-Destructive};
+	--Button-Background-Destructive-Hover: #{$Theme-Light-Button-Background-Destructive-Hover};
+	--Button-Background-Filled: #{$Theme-Light-Button-Background-Filled};
+	--Button-Background-Ghost: #{$Theme-Light-Button-Background-Ghost};
+	--Button-Background-Ghost-Hover: #{$Theme-Light-Button-Background-Ghost-Hover};
+	--Button-Background-Gradient-Start: #{$Theme-Light-Button-Background-Gradient-Start};
+	--Button-Background-Gradient-End: #{$Theme-Light-Button-Background-Gradient-End};
+	--Button-Background-Outline-Hover: #{$Theme-Light-Button-Background-Outline-Hover};
+
+	/* BUTTON TEXT */
+	--Button-Text-Primary: #{$Theme-Light-Button-Text-Primary};
+	--Button-Text-Primary-Hover: #{$Theme-Light-Button-Text-Primary-Hover};
+	--Button-Text-Secondary: #{$Theme-Light-Button-Text-Secondary};
+	--Button-Text-Destructive: #{$Theme-Light-Button-Text-Destructive};
+	--Button-Text-Filled: #{$Theme-Light-Button-Text-Filled};
+	--Button-Text-Ghost: #{$Theme-Light-Button-Text-Ghost};
+	--Button-Text-Ghost-Hover: #{$Theme-Light-Button-Text-Ghost-Hover};
+	--Button-Text-Gradient: #{$Theme-Light-Button-Text-Gradient};
+	--Button-Text-Home-Hover: #{$Theme-Light-Button-Text-Home-Hover};
+	--Button-Text-Link: #{$Theme-Light-Button-Text-Link};
+	--Button-Text-Outline: #{$Theme-Light-Button-Text-Outline};
+	--Button-Text-Outline-Hover: #{$Theme-Light-Button-Text-Outline-Hover};
+
+	/* BORDER */
+	--Border-Accordion: #{$Theme-Light-Border-Accordion};
+	--Border-Accordion-Hover: #{$Theme-Light-Border-Accordion-Hover};
+	--Border-Blog-Item: #{$Theme-Light-Border-Blog-Item};
+	--Border-Blog-Item-Hover: #{$Theme-Light-Border-Blog-Item-Hover};
+	--Border-Button-Outline: #{$Theme-Light-Border-Button-Outline};
+	--Border-Button-Primary: #{$Theme-Light-Border-Button-Primary};
+	--Border-Button-Primary-Hover: #{$Theme-Light-Border-Button-Primary-Hover};
+	--Border-Filter-Button: #{$Theme-Light-Border-Filter-Button};
+	--Border-Page-Navigation-Item: #{$Theme-Light-Border-Page-Navigation-Item};
+	--Border-Page-Navigation-Item-Hover: #{$Theme-Light-Border-Page-Navigation-Item-Hover};
+	--Border-Project-Cover-Image: #{$Theme-Light-Border-Project-Cover-Image};
+	--Border-Project-No-Cover-Image: #{$Theme-Light-Border-Project-No-Cover-Image};
+	--Border-Related-Skills-Section: #{$Theme-Light-Border-Related-Skills-Section};
+	--Border-Tag: #{$Theme-Light-Border-Tag};
+	--Border-Tag-Hover: #{$Theme-Light-Border-Tag-Hover};
+
+	/* ICON */
+	--Icon-Button-Background: #{$Theme-Light-Icon-Button-Background};
+	--Icon-Button-Background-Hover: #{$Theme-Light-Icon-Button-Background-Hover};
+	--Icon-Button-Border: #{$Theme-Light-Icon-Button-Border};
+	--Icon-Filter-Close: #{$Theme-Light-Icon-Filter-Close};
+	--Icon-Filter-Close-Hover: #{$Theme-Light-Icon-Filter-Close-Hover};
+	--Icon-Filter-Section: #{$Theme-Light-Icon-Filter-Section};
+	--Icon-Loading: #{$Theme-Light-Icon-Loading};
+	--Icon-Search: #{$Theme-Light-Icon-Search};
+	--Icon-Social: #{$Theme-Light-Icon-Social};
+	--Icon-Text: #{$Theme-Light-Icon-Text};
+
+	/* FOOTER */
+	--Footer-Divider: #{$Theme-Light-Footer-Divider};
+	--Footer-Text-Primary: #{$Theme-Light-Footer-Text-Primary};
+	--Footer-Text-Secondary: #{$Theme-Light-Footer-Text-Secondary};
+
+	color-scheme: Light;
+}
+
+@mixin Dark-Theme {
+	/* TEXT */
+	--Text-About-Page-Link-Hover: #{$Theme-Dark-Text-About-Page-Link-Hover};
+	--Text-Archive-Toggle: #{$Theme-Dark-Text-Archive-Toggle};
+	--Text-Blog-Item-Title: #{$Theme-Dark-Text-Blog-Item-Title};
+	--Text-Blog-Item-Subtitle: #{$Theme-Dark-Text-Blog-Item-Subtitle};
+	--Text-Certificate-Description: #{$Theme-Dark-Text-Certificate-Description};
+	--Text-Filter-Message: #{$Theme-Dark-Text-Filter-Message};
+	--Text-Filter-Name: #{$Theme-Dark-Text-Filter-Name};
+	--Text-Heading-Two: #{$Theme-Dark-Text-Heading-Two};
+	--Text-Heading-Four: #{$Theme-Dark-Text-Heading-Four};
+	--Text-Homepage-Hero-Welcome: #{$Theme-Dark-Text-Homepage-Hero-Welcome};
+	--Text-Navigation: #{$Theme-Dark-Text-Navigation};
+	--Text-Navigation-Hover: #{$Theme-Dark-Text-Navigation-Hover};
+	--Text-Page-Navigation-Item-Description: #{$Theme-Dark-Text-Page-Navigation-Item-Description};
+	--Text-Page-Navigation-Item-Label: #{$Theme-Dark-Text-Page-Navigation-Item-Label};
+	--Text-Page-Not-Found: #{$Theme-Dark-Text-Page-Not-Found};
+	--Text-Primary: #{$Theme-Dark-Text-Primary};
+	--Text-Project-Item-Description: #{$Theme-Dark-Text-Project-Item-Description};
+	--Text-Project-Key-Description: #{$Theme-Dark-Text-Project-Key-Description};
+	--Text-Project-Item-Title-Hover: #{$Theme-Dark-Text-Project-Item-Title-Hover};
+	--Text-Prose: #{$Theme-Dark-Text-Prose};
+	--Text-Tag: #{$Theme-Dark-Text-Tag};
+	--Text-Title-Page-Not-Found: #{$Theme-Dark-Text-Title-Page-Not-Found};
+
+	/* BACKGROUND */
+	--Background-Accordion: #{$Theme-Dark-Background-Accordion};
+	--Background-Blog-Item: #{$Theme-Dark-Background-Blog-Item};
+	--Background-Blog-Item-Hover: #{$Theme-Dark-Background-Blog-Item-Hover};
+	--Background-Certificate-Image: #{$Theme-Dark-Background-Certificate-Image};
+	--Background-Filter-Section: #{$Theme-Dark-Background-Filter-Section};
+	--Background-Header: #{$Theme-Dark-Background-Header};
+	--Background-Navigation-Hover: #{$Theme-Dark-Background-Navigation-Hover};
+	--Background-Page-Navigation-Item: #{$Theme-Dark-Background-Page-Navigation-Item};
+	--Background-Page-Navigation-Item-Desktop: #{$Theme-Dark-Background-Page-Navigation-Item-Desktop};
+	--Background-Primary: #{$Theme-Dark-Background-Primary};
+	--Background-Role-Skills: #{$Theme-Dark-Background-Role-Skills};
+	--Background-Role-Skills-Hover: #{$Theme-Dark-Background-Role-Skills-Hover};
+	--Background-Tag: #{$Theme-Dark-Background-Tag};
+	--Background-Video-Player: #{$Theme-Dark-Background-Video-Player};
+
+	/* BUTTON BACKGROUND */
+	--Button-Background-Primary: #{$Theme-Dark-Button-Background-Primary};
+	--Button-Background-Primary-Hover: #{$Theme-Dark-Button-Background-Primary-Hover};
+	--Button-Background-Secondary: #{$Theme-Dark-Button-Background-Secondary};
+	--Button-Background-Secondary-Hover: #{$Theme-Dark-Button-Background-Secondary-Hover};
+	--Button-Background-Destructive: #{$Theme-Dark-Button-Background-Destructive};
+	--Button-Background-Destructive-Hover: #{$Theme-Dark-Button-Background-Destructive-Hover};
+	--Button-Background-Filled: #{$Theme-Dark-Button-Background-Filled};
+	--Button-Background-Ghost: #{$Theme-Dark-Button-Background-Ghost};
+	--Button-Background-Ghost-Hover: #{$Theme-Dark-Button-Background-Ghost-Hover};
+	--Button-Background-Gradient-Start: #{$Theme-Dark-Button-Background-Gradient-Start};
+	--Button-Background-Gradient-End: #{$Theme-Dark-Button-Background-Gradient-End};
+	--Button-Background-Outline-Hover: #{$Theme-Dark-Button-Background-Outline-Hover};
+
+	/* BUTTON TEXT */
+	--Button-Text-Primary: #{$Theme-Dark-Button-Text-Primary};
+	--Button-Text-Primary-Hover: #{$Theme-Dark-Button-Text-Primary-Hover};
+	--Button-Text-Destructive: #{$Theme-Dark-Button-Text-Destructive};
+	--Button-Text-Filled: #{$Theme-Dark-Button-Text-Filled};
+	--Button-Text-Ghost: #{$Theme-Dark-Button-Text-Ghost};
+	--Button-Text-Ghost-Hover: #{$Theme-Dark-Button-Text-Ghost-Hover};
+	--Button-Text-Gradient: #{$Theme-Dark-Button-Text-Gradient};
+	--Button-Text-Home-Hover: #{$Theme-Dark-Button-Text-Home-Hover};
+	--Button-Text-Link: #{$Theme-Dark-Button-Text-Link};
+	--Button-Text-Outline: #{$Theme-Dark-Button-Text-Outline};
+	--Button-Text-Outline-Hover: #{$Theme-Dark-Button-Text-Outline-Hover};
+
+	/* BORDER */
+	--Border-Accordion: #{$Theme-Dark-Border-Accordion};
+	--Border-Accordion-Hover: #{$Theme-Dark-Border-Accordion-Hover};
+	--Border-Blog-Item: #{$Theme-Dark-Border-Blog-Item};
+	--Border-Blog-Item-Hover: #{$Theme-Dark-Border-Blog-Item-Hover};
+	--Border-Button-Outline: #{$Theme-Dark-Border-Button-Outline};
+	--Border-Button-Primary: #{$Theme-Dark-Border-Button-Primary};
+	--Border-Button-Primary-Hover: #{$Theme-Dark-Border-Button-Primary-Hover};
+	--Border-Filter-Button: #{$Theme-Dark-Border-Filter-Button};
+	--Border-Page-Navigation-Item: #{$Theme-Dark-Border-Page-Navigation-Item};
+	--Border-Page-Navigation-Item-Hover: #{$Theme-Dark-Border-Page-Navigation-Item-Hover};
+	--Border-Project-Cover-Image: #{$Theme-Dark-Border-Project-Cover-Image};
+	--Border-Project-No-Cover-Image: #{$Theme-Dark-Border-Project-No-Cover-Image};
+	--Border-Related-Skills-Section: #{$Theme-Dark-Border-Related-Skills-Section};
+	--Border-Tag: #{$Theme-Dark-Border-Tag};
+	--Border-Tag-Hover: #{$Theme-Dark-Border-Tag-Hover};
+
+	/* ICON */
+	--Icon-Button-Background: #{$Theme-Dark-Icon-Button-Background};
+	--Icon-Button-Background-Hover: #{$Theme-Dark-Icon-Button-Background-Hover};
+	--Icon-Button-Border: #{$Theme-Dark-Icon-Button-Border};
+	--Icon-Filter-Close: #{$Theme-Dark-Icon-Filter-Close};
+	--Icon-Filter-Close-Hover: #{$Theme-Dark-Icon-Filter-Close-Hover};
+	--Icon-Filter-Section: #{$Theme-Dark-Icon-Filter-Section};
+	--Icon-Loading: #{$Theme-Dark-Icon-Loading};
+	--Icon-Search: #{$Theme-Dark-Icon-Search};
+	--Icon-Social: #{$Theme-Dark-Icon-Social};
+	--Icon-Text: #{$Theme-Dark-Icon-Text};
+
+	/* FOOTER */
+	--Footer-Divider: #{$Theme-Dark-Footer-Divider};
+	--Footer-Text-Primary: #{$Theme-Dark-Footer-Text-Primary};
+	--Footer-Text-Secondary: #{$Theme-Dark-Footer-Text-Secondary};
+
+	color-scheme: Dark;
+}
+
+.Light {
+	@include Light-Theme;
+}
+
+.Dark {
+	@include Dark-Theme;
+}
+
+/* OS DEFAULT */
+:Root:Not(.Light):Not(.Dark) {
+	@media (prefers-color-scheme: Light) {
+		@include Light-Theme;
+	}
+
+	@media (prefers-color-scheme: Dark) {
+		@include Dark-Theme;
+	}
+}

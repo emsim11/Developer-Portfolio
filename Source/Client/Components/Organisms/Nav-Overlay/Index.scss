@@ -1,0 +1,35 @@
+@use '../../../SASS/Variables' as *;
+
+.Navigation-Overlay {
+	align-items: center;
+	justify-content: center;
+	padding-top: 5rem;
+
+	& > * + * {
+		margin-top: 2rem;
+	}
+
+	@media (min-width: $Screen-Medium) {
+		display: flex;
+
+		& > * + * {
+			margin-left: 1.5rem;
+			margin-top: 0;
+		}
+	}
+}
+
+.Navigation-Overlay-Item {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+
+	@media (min-width: $Screen-Medium) {
+		width: auto;
+	}
+}
+
+.Navigation-Overlay-Socials {
+	padding-bottom: 5rem;
+	width: 100%;
+}

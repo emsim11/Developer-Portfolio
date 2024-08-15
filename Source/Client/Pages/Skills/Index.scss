@@ -1,0 +1,11 @@
+@use '../../SASS/Mixins' as *;
+
+.Skills-Page {
+	@include Screen-Reader;
+}
+
+.Skills {
+	@include Fade-In(0.2s);
+	min-height: 85vh;
+	width: 100%;
+}

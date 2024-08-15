@@ -1,0 +1,95 @@
+@use '../../../SASS/Variables' as *;
+
+.Search-Input {
+	position: relative;
+	width: 100%;
+
+	@media (min-width: $Screen-Medium) {
+		flex-grow: 1;
+		order: 9999;
+	}
+}
+
+.Search-Input-Value {
+	border-radius: 0.75rem;
+	box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+	height: 3rem;
+	overflow: auto;
+	padding-left: 3rem;
+	padding-right: 0.5rem;
+	width: 100%;
+
+	&:Focus {
+		box-shadow:
+			0 10px 15px -3px rgb(0 0 0 / 0.1),
+			0 4px 6px -4px rgb(0 0 0 / 0.1);
+		outline: 2px solid transparent;
+		outline-offset: 2px;
+	}
+
+	&:Hover {
+		box-shadow:
+			0 10px 15px -3px rgb(0 0 0 / 0.1),
+			0 4px 6px -4px rgb(0 0 0 / 0.1);
+	}
+	/*
+	border
+	bg-neutral-100 dark:bg-neutral-800
+	text-neutral-700 dark:text-neutral-200
+	border-neutral-300 dark:border-neutral-700
+	focus:border-red-500 dark:focus:border-red-900
+	hover:border-red-500 dark:hover:border-red-800
+	transition-all ease-out duration-500 */
+}
+
+.Search-Input-Search {
+	left: 1rem;
+	position: absolute;
+	top: 50%;
+	/*
+	transform -translate-y-1/2
+	text-neutral-500 dark:text-neutral-200 */
+}
+
+.Search-Input-Container {
+	align-items: flex-end;
+	background-color: inherit;
+	display: flex;
+	flex-direction: row;
+	padding: 0.25rem, 0.5rem, 0.25rem, 0.25rem;
+	position: absolute;
+	right: 0.5rem;
+	top: 50%;
+
+	& > * + * {
+		margin-left: 0.5rem;
+	}
+	/* transform -translate-y-1/2 */
+}
+
+.Search-Input-Clear-Icon {
+	cursor: pointer;
+
+	&:Hover {
+		transform: scale(1.25);
+	}
+	/* text-neutral-500 hover:text-red-500 dark:hover:text-red-800
+	transition-all ease-out duration-300 */
+}
+
+.Search-Input-Button {
+
+	&:Hover {
+		transform: scale(1.25);
+	}
+	/* text-neutral-500 transition-all ease-out duration-300 */
+}
+
+.Search-Disabled {
+	cursor: not-allowed;
+	opacity: 0.5;
+}
+
+.Search-Enabled {
+	cursor: pointer;
+}

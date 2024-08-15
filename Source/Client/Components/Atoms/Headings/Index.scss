@@ -1,0 +1,46 @@
+@use '../../../SASS/Variables' as *;
+
+.Heading-One {
+	font-size: 3rem;
+	font-weight: 700;
+	margin-top: 5rem;
+	text-align: center;
+
+	@media (min-width: $Screen-Medium) {
+		font-size: 4.5rem;
+		line-height: 1;
+		margin-top: 5rem;
+	}
+}
+
+.Heading-Two {
+	font-size: 2.25rem;
+	font-weight: 700;
+	line-height: 2.5rem;
+	margin-top: 5rem;
+	text-align: center;
+}
+
+.Heading-Two-Line-Separator {
+	background-color: var(--Text-Heading-Two);
+	border: 0;
+	border-radius: 0.25rem;
+	height: 0.25rem;
+	margin: 1rem auto;
+	width: 1.5rem;
+}
+
+.Heading-Three {
+	font-size: 1.5rem;
+	font-weight: 700;
+	line-height: 2rem;
+	margin-bottom: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+.Heading-Four {
+	color: var(--Text-Heading-Four);
+	font-size: 1.125rem;
+	font-weight: 700;
+	margin-bottom: 0.5rem;
+}

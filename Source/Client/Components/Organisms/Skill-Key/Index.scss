@@ -1,0 +1,9 @@
+@use '../../../SASS/Mixins' as *;
+
+.Skill-Page {
+	@include Screen-Reader;
+}
+
+.Skill-Page-Materials {
+	padding-top: 2rem;
+}

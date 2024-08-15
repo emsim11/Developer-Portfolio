@@ -1,0 +1,40 @@
+@use '../../../SASS/Variables' as *;
+
+.Nav-Section {
+	display: none;
+
+	@media (min-width: $Screen-Medium) {
+		display: block;
+	}
+}
+
+.Nav-Section-Container {
+	align-items: center;
+	display: flex;
+	justify-content: center;
+	margin-top: 1.75rem;
+
+	@media (min-width: $Screen-Medium) {
+		display: flex;
+		margin-top: 0;
+	}
+}
+
+.Nav-Section-Item {
+	display: flex;
+	flex: 1;
+	justify-content: center;
+	width: 100%;
+
+	@media (min-width: $Screen-Medium) {
+		width: auto;
+	}
+}
+
+.Theme-Switcher-Container {
+	display: none;
+
+	@media (min-width: $Screen-Medium) {
+		display: block;
+	}
+}

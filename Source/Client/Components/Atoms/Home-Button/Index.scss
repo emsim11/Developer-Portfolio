@@ -1,0 +1,21 @@
+@use '../../../SASS/Variables' as *;
+
+.Home-Button {
+	cursor: pointer;
+}
+
+.Home-Button-Developer-Name {
+	font-weight: 700;
+	font-size: 1.5rem;
+	line-height: 2rem;
+
+	@media (min-width: 768px) {
+		transition-property: color;
+		transition-duration: 700ms;
+		transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+		&:Hover {
+			color: var(--Button-Text-Home-Hover);
+		}
+	}
+}

@@ -1,0 +1,12 @@
+# Editor Directories & Files
+.DS_STORE
+.Idea
+
+# Protected Files
+.Env
+
+# Package Bundles
+Node_Modules
+Build
+Build-SSR
+Dev-Dist

@@ -1,0 +1,90 @@
+@use '../../../SASS/Mixins' as *;
+@use '../../../SASS/Variables' as *;
+
+.Course-Item {
+	@include Slide-Up-Cubic-Bezier(0.2s);
+	background-color: var(--Background-Blog-Item);
+	border: 1px solid var(--Border-Blog-Item);
+	border-radius: 0.75rem;
+	box-shadow:
+		0 4px 6px -1px rgb(0 0 0 / 0.1),
+		0 2px 4px -2px rgb(0 0 0 / 0.1);
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	padding: 0.75rem;
+	transition: color 0.7s;
+	width: 100%;
+
+	@media (min-width: $Screen-Large) {
+		padding: 1.5rem;
+	}
+}
+
+.Course-Item-Image-Container {
+	border-radius: 0.75rem;
+	box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+	display: flex;
+	justify-content: center;
+	margin-bottom: 1.5rem;
+	overflow: hidden;
+	transition: all 0.5s ease-in-out;
+	width: 100%;
+
+	@media (min-width: $Screen-Medium) {
+		&:Hover {
+			box-shadow:
+				0 10px 15px -3px rgb(0 0 0 / 0.1),
+				0 4px 6px -4px rgb(0 0 0 / 0.1);
+			transform: scale(1.05);
+		}
+	}
+}
+
+.Course-Item-Aspect-Ratio {
+	overflow: hidden;
+	position: relative;
+}
+
+.Course-Item-Image {
+	border-radius: 0.75rem;
+	cursor: pointer;
+	object-fit: cover;
+}
+
+.Course-Item-Certificate-Info {
+	display: flex;
+	flex-direction: column;
+	gap: 1.25rem;
+	padding: 1rem;
+}
+
+.Course-Item-Certificate-Title {
+	font-size: 1.875rem;
+	font-weight: 700;
+	line-height: 2.25rem;
+	text-align: center;
+	transition: color 0.7s ease-in-out;
+
+	@media (min-width: $Screen-Medium) {
+		font-size: 2.25rem;
+		line-height: 2.5rem;
+
+		&:Hover {
+			color: var(--Text-Project-Item-Title-Hover);
+		}
+	}
+}
+
+.Course-Item-Certificate-Grade {
+	color: var(--Icon-Search);
+	font-size: 1.25rem;
+	line-height: 1.75rem;
+	text-align: center;
+}
+
+.Course-Item-Certificate-University {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+}

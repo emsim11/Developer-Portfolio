@@ -1,0 +1,155 @@
+@use '../../../SASS/Mixins' as *;
+@use '../../../SASS/Variables' as *;
+
+.Certificate-Page {
+	@include Screen-Reader;
+}
+
+.Certificate {
+	min-height: 85vh;
+	position: relative;
+	vertical-align: top;
+
+	& > * + * {
+		margin-top: 1.5rem;
+	}
+}
+
+.Certificate-Container {
+	& > * + * {
+		margin-top: 0.25rem;
+	}
+}
+
+.Certificate-Image-Container {
+	background-color: var(--Background-Certificate-Image);
+	border-radius: 0.75rem;
+	display: flex;
+	justify-content: center;
+	margin-bottom: 1.5rem;
+	overflow: hidden;
+	padding: 0.75rem;
+	vertical-align: middle;
+	width: 100%;
+}
+
+.Certificate-Image-Aspect-Ratio {
+	overflow: hidden;
+	position: relative;
+}
+
+.Certificate-Image {
+	border-radius: 0.75rem;
+	color: transparent;
+	height: 100%;
+	inset: 0px;
+	object-fit: cover;
+	position: absolute;
+	width: 100%;
+}
+.Certificate-Credentials {
+	display: flex;
+	flex-direction: row;
+	vertical-align: middle;
+	width: 100%;
+}
+
+.Certificate-Credentials-Text {
+	line-height: 1.75rem;
+	overflow: auto;
+	overflow-wrap: break-word;
+	text-align: center;
+	/* text-l
+	text-neutral-400 dark:text-neutral-600 */
+}
+
+.Certificate-Data {
+	& > * + * {
+		margin-top: 3.5rem;
+	}
+}
+
+.Certificate-Description {
+	display: flex;
+	flex-direction: column;
+}
+
+.Certificate-Description-Title {
+	text-align: center;
+
+	@media (min-width: $Screen-Medium) {
+		text-align: left;
+	}
+}
+
+.Certificate-Description-Text {
+	color: var(--Text-Certificate-Description);
+}
+
+.Certificate-Learning-Outcomes {
+	text-align: center;
+
+	@media (min-width: $Screen-Large) {
+		text-align: left;
+	}
+}
+
+.Certificate-Issuer {
+	@media (min-width: $Screen-Medium) {
+		display: grid;
+		grid-template-columns: Repeat(2, MinMax(0, 1fr));
+	}
+}
+
+.Certificate-Issuer-Tag {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin-top: 1.25rem;
+	z-index: 10;
+
+	@media (min-width: $Screen-Medium) {
+		justify-content: flex-start;
+	}
+}
+
+.Certificate-Links {
+	align-items: center;
+	display: flex;
+	flex-direction: row;
+	gap: 0.5rem;
+	justify-content: center;
+	margin-top: 1.5rem;
+	width: 100%;
+
+	@media (min-width: $Screen-Medium) {
+		justify-content: flex-start;
+	}
+}
+
+.Certificate-Link {
+	width: auto;
+
+	@media (min-width: $Screen-Medium) {
+		width: 100%;
+	}
+}
+
+.Certificate-Link-Container {
+	display: flex;
+	gap: 1rem;
+	justify-content: center;
+	text-align: center;
+	width: 100%;
+
+	@media (min-width: $Screen-Medium) {
+		justify-content: flex-start;
+	}
+}
+
+.Certificate-Divider {
+	border-color: var(--Border-Related-Skills-Section);
+	border-bottom-width: 1px;
+	padding: 0.5rem 0 0.75rem 0;
+}

@@ -1,0 +1,66 @@
+@use '../../SASS/Variables' as *;
+@use '../../SASS/Mixins' as *;
+
+.Page-Not-Found {
+	@include Fade-In(0ms);
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin-bottom: 2.5rem;
+	margin-top: 2.5rem;
+	min-height: 85vh;
+	padding-bottom: 4rem;
+	padding-top: 4rem;
+	text-align: center;
+
+	& > * + * {
+		margin-top: 2.75rem;
+	}
+
+	@media (min-width: $Screen-Small) {
+		padding-bottom: 8rem;
+		padding-top: 8rem;
+	}
+}
+
+.Page-Not-Found-Container {
+	margin-top: 1rem;
+}
+
+.Page-Not-Found-Title {
+	color: var(--Text-Title-Page-Not-Found);
+	font-size: 3rem;
+	line-height: 1;
+}
+
+.Page-Not-Found-Subtitle {
+	color: var(--Text-Title-Page-Not-Found);
+	font-size: 3rem;
+	font-weight: 600;
+	line-height: 1;
+}
+
+.Page-Not-Found-Text {
+	color: var(--Text-Page-Not-Found);
+	font-size: 1.5rem;
+	font-weight: 500;
+	line-height: 2rem;
+	margin-bottom: 1rem;
+	transition: color 500ms;
+}
+
+.Page-Not-Found-Links {
+	display: flex;
+	flex-direction: column;
+	margin-top: 1rem;
+	width: 100%;
+
+	@media (min-width: $Screen-Medium) {
+		width: 20%;
+	}
+}
+
+.Page-Not-Found-Link {
+	width: 100%;
+}

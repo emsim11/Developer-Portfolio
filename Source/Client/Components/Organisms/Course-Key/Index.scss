@@ -1,0 +1,82 @@
+@use '../../../SASS/Mixins' as *;
+@use '../../../SASS/Variables' as *;
+
+.Course-Page {
+	@include Screen-Reader;
+}
+
+.Course-Key {
+
+	& > * + * {
+		margin-left: 0;
+	}
+
+	@media (min-width: $Screen-Large) {
+		& > * + * {
+			margin-left: 1.5rem;
+		}
+	}
+	/* grid grid-cols-1 lg:grid-cols-2 lg:grid-flow-col-reverse */
+}
+
+.Course-Key-Left-Section {
+	border-radius: 0.75rem;
+	/*
+	transition-all duration-500 ease-in-out
+	p-1 lg:p-3
+	bg-neutral-100 dark:bg-neutral-950 */
+}
+
+.Course-Key-Aspect-Ratio {
+	overflow: hidden;
+	position: relative;
+}
+
+.Course-Key-Image {
+	border-radius: 0.75rem;
+	/* object-cover */
+}
+
+.Course-Key-Right-Section {
+	/* py-2 */
+}
+
+.Course-Key-Category {
+	/* text-2xl text-neutral-700 dark:text-neutral-200 -mt-4 */
+}
+
+.Course-Key-Grade {
+
+	& > * + * {
+		margin-left: 0.25rem;
+	}
+	/* py-4
+	flex w-full
+	text-xl text-neutral-800 dark:text-neutral-300 */
+}
+
+.Course-Key-Grade-Label {
+	/* font-bold */
+}
+
+.Course-Key-Modules {
+	& > * + * {
+		margin-top: 3.5rem;
+	}
+}
+
+.Course-Key-Modules-Container {
+	text-align: center;
+
+	@media (min-width: $Screen-Large) {
+		text-align: left;
+	}
+}
+
+.Course-Key-Module {
+	/* mb-4 */
+}
+
+.Course-Key-Materials-Divider {
+	/* pt-2 pb-3 border-b border-gray-200 dark:border-neutral-600 */
+}

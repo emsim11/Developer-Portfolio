@@ -1,0 +1,32 @@
+@use '../../../SASS/Variables' as *;
+
+.Grid {
+	display: grid;
+	grid-template-columns: Repeat(1, MinMax(0, 1fr));
+	margin-top: 5vh; /* 10vh */
+
+	@media (min-width: $Screen-Medium) {
+		grid-template-columns: Repeat(2, MinMax(0, 1fr));
+	}
+}
+
+.Grid-Item-Odd {
+	display: flex;
+	justify-content: center;
+
+	@media (min-width: $Screen-Medium) {
+		grid-column: Span 2;
+	}
+}
+
+.Grid-Item-Odd-Container {
+	width: 100%;
+
+	@media (min-width: $Screen-Medium) {
+		width: 50%;
+	}
+}
+
+.Grid-Item {
+	width: 100%;
+}

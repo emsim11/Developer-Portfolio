@@ -1,0 +1,94 @@
+.Command {
+	border-radius: 0.75rem;
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	overflow: auto;
+	width: 100%;
+	/* bg-popover text-popover-foreground */
+}
+
+.Command-Dialog-Content {
+	box-shadow:
+		0 10px 15px -3px rgb(0 0 0 / 0.1),
+		0 4px 6px -4px rgb(0 0 0 / 0.1);
+	overflow: auto;
+	/* p-0 */
+}
+
+.Command-Dialog-Content-Command {
+	/* [&_[cmdk-group-heading]]:px-2 [&_[cmdk-group-heading]]:font-medium [&_[cmdk-group-heading]]:text-muted-foreground [&_[cmdk-group]:not([hidden])_~[cmdk-group]]:pt-0 [&_[cmdk-group]]:px-2 [&_[cmdk-input-wrapper]_svg]:h-5 [&_[cmdk-input-wrapper]_svg]:w-5 [&_[cmdk-input]]:h-12 [&_[cmdk-item]]:px-2 [&_[cmdk-item]]:py-3 [&_[cmdk-item]_svg]:h-5 [&_[cmdk-item]_svg]:w-5 */
+}
+
+.Command-Input {
+	align-items: center;
+	display: flex;
+	/* border-b px-3 */
+}
+
+.Command-Input-Search {
+	flex-shrink: 0;
+	height: 1rem;
+	width: 1rem;
+	/* mr-2 opacity-50 */
+}
+
+.Command-Input-Search-Container {
+	background-color: transparent;
+	border-radius: 0.375rem;
+	display: flex;
+	font-size: 0.875rem;
+	height: 2.75rem;
+	line-height: 1.25rem;
+	width: 100%;
+	/* py-3 outline-none placeholder:text-muted-foreground
+	disabled:cursor-not-allowed disabled:opacity-50 */
+}
+
+.Command-List {
+	max-height: 300px;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+
+.Command-Empty {
+	font-size: 0.875rem;
+	line-height: 1.25rem;
+	text-align: center;
+	/* py-6 */
+}
+
+.Command-Group {
+	overflow: auto;
+
+	& > * + * {
+		margin-top: 0.25rem;
+	}
+	/* p-1 text-foreground [&_[cmdk-group-heading]]:px-2
+	[&_[cmdk-group-heading]]:py-1.5 [&_[cmdk-group-heading]]:text-xs
+	[&_[cmdk-group-heading]]:font-medium
+	[&_[cmdk-group-heading]]:text-muted-foreground */
+}
+
+.Command-Separator {
+	height: 1px;
+	/* -mx-1 bg-border */
+}
+
+.Command-Item {
+	align-items: center;
+	border-radius: 0.5rem;
+	cursor: default;
+	display: flex;
+	position: relative;
+	/* select-none px-2 py-2 text-md outline-none
+	aria-selected:bg-accent aria-selected:text-accent-foreground
+	data-[disabled]:pointer-events-none data-[disabled]:opacity-50 */
+}
+
+.Command-Shortcut {
+	font-size: 0.75rem;
+	line-height: 1rem;
+	margin-left: auto;
+	/* tracking-widest text-muted-foreground */
+}

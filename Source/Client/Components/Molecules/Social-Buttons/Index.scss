@@ -1,0 +1,17 @@
+@use '../../../SASS/Variables' as *;
+
+.Social-Buttons {
+	align-items: center;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	margin-bottom: 0.25rem;
+
+	@media (min-width: $Screen-Medium) {
+		align-items: center;
+	}
+
+	@media (min-width: $Screen-Large) {
+		justify-content: flex-start;
+	}
+}

@@ -1,0 +1,40 @@
+@use '../../../SASS/Variables' as *;
+
+.Blog-Item {
+	background-color: var(--Background-Blog-Item);
+	border: 1px solid var(--Border-Blog-Item);
+	border-radius: 0.75rem;
+	box-shadow:
+		0 4px 6px -1px rgb(0, 0, 0, 0.1),
+		0 2px 4px -2px rgb(0, 0, 0, 0.1);
+	cursor: pointer;
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	max-height: 280px;
+	min-height: 180px;
+	padding: 1rem;
+	transition: all 500ms ease-in-out;
+
+	@media (min-width: $Screen-Medium) {
+		&:Hover {
+			background-color: var(--Background-Blog-Item-Hover);
+			box-shadow:
+				0 10px 15px -3px rgb(0, 0, 0, 0.1),
+				0 4px 6px -4px rgb(0, 0, 0, 0.1);
+			transform: scale(1.05);
+		}
+	}
+}
+
+.Blog-Item-Title {
+	color: var(--Text-Blog-Item-Title);
+	font-size: 1.25rem;
+	font-weight: 700;
+	line-height: 1.75rem;
+	margin-bottom: 1rem;
+}
+
+.Blog-Item-Subtitle {
+	color: var(--Text-Blog-Item-Subtitle);
+}

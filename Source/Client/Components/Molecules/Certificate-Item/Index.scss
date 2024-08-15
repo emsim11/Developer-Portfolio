@@ -1,0 +1,75 @@
+.Certificate-Item {
+	border-radius: 0.75rem;
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	width: 100%;
+	/* bg-neutral-100 dark:bg-neutral-800
+	border border-neutral-300 dark:border-neutral-700
+	p-3 lg:p-6
+	transition-colors duration-700
+	shadow-md */
+}
+
+.Certificate-Item-Image-Container {
+	border-radius: 0.75rem;
+	display: flex;
+	justify-content: center;
+	margin-bottom: 1.5rem;
+	overflow: hidden;
+	width: 100%;
+	/* transform md:hover:scale-105
+	shadow-sm md:hover:shadow-lg
+	border border-neutral-100 dark:border-neutral-800
+	transition-all duration-500 ease-in-out */
+}
+
+.Certificate-Item-Image-Ratio {
+	overflow: hidden;
+	position: relative;
+}
+
+.Certificate-Item-Image {
+	border-radius: 0.75rem;
+	cursor: pointer;
+	object-fit: cover;
+}
+
+.Certificate-Title {
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+	padding: 1rem;
+}
+
+.Certificate-Title-Header {
+	font-size: 1.875rem;
+	font-weight: 700;
+	line-height: 2.25rem;
+	text-align: center;
+	/* md:text-4xl
+	md:hover:text-red-500 md:dark:hover:text-red-800
+	transition-colors duration-700 ease-in-out */
+}
+
+.Certificate-Issuer {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+}
+
+.Certificate-Credentials {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	vertical-align: bottom;
+	/* space-x-4 */
+}
+
+.Certificate-Credentials-Icon {
+	/* md:hover:-translate-y-1 transition-transform cursor-pointe */
+}
+
+.Certificate-Providers-Icon {
+	/* md:hover:-translate-y-1 transition-transform cursor-pointer */
+}

@@ -1,0 +1,9 @@
+@use '../../../SASS/Mixins' as *;
+
+.Modules-List {
+	margin-bottom: 1rem;
+}
+
+.Modules-List-Grid {
+	@include Slide-Up-Cubic-Bezier(0ms);
+}

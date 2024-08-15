@@ -1,0 +1,151 @@
+@use '../../../SASS/Variables' as *;
+
+/* STYLES */
+.Destructive {
+	background-color: var(--Button-Background-Destructive);
+	color: var(--Button-Text-Destructive);
+
+	&:Hover {
+		background-color: var(--Button-Background-Destructive-Hover);
+	}
+}
+
+.Filled {
+	background-color: var(--Button-Background-Filled);
+	box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+	color: var(--Button-Text-Filled);
+
+	@media (min-width: $Screen-Medium) {
+		&:Hover {
+			box-shadow: 0 10px 20px -8px rgba(0, 0, 0, 0.2);
+		}
+	}
+}
+
+.Ghost {
+	background-color: var(--Button-Background-Ghost);
+	border: 0;
+	color: var(--Button-Text-Ghost);
+
+	@media (min-width: $Screen-Medium) {
+		&:Hover {
+			background-color: var(--Button-Background-Ghost-Hover);
+			color: var(--Button-Text-Ghost-Hover);
+		}
+	}
+}
+
+.Gradient {
+	background: linear-gradient(to right, var(--Button-Background-Gradient-Start), var(--Button-Background-Gradient-End));
+	box-shadow:
+		0 20px 25px -5px rgb(0, 0, 0, 0.1)
+		0 8px 10px -6px rgb(0, 0, 0, 0.1);
+	color: var(--Button-Text-Gradient);
+
+	@media (min-width: $Screen-Medium) {
+		&:Hover {
+			box-shadow: 0 35px 60px -15px rgba(0, 0, 0, 0.3);
+			transform: scale(1.05);
+		}
+	}
+}
+
+.Icon {
+	background-color: var(--Icon-Button-Background);
+	border: 2px solid var(--Icon-Button-Border);
+	border-radius: 9999px;
+	color: var(--Icon-Text);
+
+	@media (min-width: $Screen-Medium) {
+		&:Hover {
+			background-color: var(--Icon-Button-Background-Hover);
+		}
+	}
+}
+
+.Link {
+	color: var(--Button-Text-Link);
+	text-decoration: underline;
+
+	&:Hover {
+		text-decoration-thickness: 4px;
+	}
+}
+
+.Outline {
+	background-color: transparent;
+	border: 2px solid var(--Border-Button-Outline);
+	color: var(--Button-Text-Outline);
+
+	@media (min-width: $Screen-Medium) {
+		&:Hover {
+			background-color: var(--Button-Background-Outline-Hover);
+			color: var(--Button-Text-Outline-Hover);
+		}
+	}
+}
+
+.Primary {
+	animation: all 500ms ease-in-out;
+	background-color: var(--Button-Background-Primary);
+	border: 1px solid var(--Border-Button-Primary);
+	box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.5);
+	color: var(--Button-Text-Primary);
+	text-transform: capitalize;
+	transition: all 500ms ease-in-out;
+
+	&:Focus {
+		box-shadow:
+		0 10px 15px -3px rgb(0, 0, 0, 0.1),
+		0 4px 6px -4px rgb(0, 0, 0, 0.1);
+	}
+
+	@media (min-width: $Screen-Medium) {
+		border: 1px solid var(--Border-Button-Primary);
+
+		&:Hover {
+			background-color: var(--Button-Background-Primary-Hover);
+			border-color: var(--Border-Button-Primary-Hover);
+			box-shadow:
+				0 10px 15px -3px rgb(0, 0, 0, 0.1),
+				0 4px 6px -4px rgb(0, 0, 0, 0.1);
+			color: var(--Button-Text-Primary-Hover);
+		}
+	}
+}
+
+.Secondary {
+	background-color: var(--Button-Background-Secondary);
+	color: var(--Button-Text-Secondary);
+
+	&:Hover {
+		background-color: var(--Button-Background-Secondary-Hover);
+	}
+}
+
+/* SIZES */
+.Default {
+	border-radius: 0.75rem;
+	height: 3rem;
+	padding-bottom: 0.75rem;
+	padding-left: 1.5rem;
+	padding-right: 1.5rem;
+  	padding-top: 0.75rem;
+}
+
+.Icon-Size {
+	height: 2.5rem;
+	width: 2.5rem;
+}
+
+.Small {
+	border-radius: 0.75rem;
+	height: 2.5rem;
+	padding: 0.5rem 0.75rem;
+}
+
+.Large {
+	border-radius: 0.75rem;
+	height: 3.5rem;
+	padding: 2rem;
+}

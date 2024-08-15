@@ -1,0 +1,14 @@
+@use '../../../../SASS/Variables' as *;
+
+.Languages {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin-top: -0.5rem;
+	z-index: 10;
+
+	@media (min-width: $Screen-Medium) {
+		justify-content: flex-start;
+	}
+}

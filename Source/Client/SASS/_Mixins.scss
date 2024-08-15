@@ -1,0 +1,175 @@
+/* ACCORDION DOWN */
+@keyframes Accordion-Down {
+	From {
+		height: 0;
+	}
+
+	To {
+		height: var(--Accordion-Content-Height);
+	}
+}
+
+@mixin Accordion-Down {
+	animation: Accordion-Down 0.2s ease-out;
+}
+
+/* ACCORDION UP */
+@keyframes Accordion-Up {
+	From {
+		height: var(--Accordion-Content-Height);
+	}
+
+	To {
+		height: 0;
+	}
+}
+
+@mixin Accordion-Up {
+	animation: Accordion-Up 0.2s ease-out;
+}
+
+/* BOUNCE */
+@keyframes Bounce {
+	0%, 100% {
+		animation-timing-function: cubic-bezier(0.95, 0.05, 0.795, 0.035); /* cubic-bezier(0.8, 0, 1, 1) */
+		transform: translateY(-35%); /* -25% */
+	}
+
+	50% {
+		animation-timing-function: cubic-bezier(0.95, 0.05, 0.795, 0.035); /* cubic-bezier(0, 0, 0.2, 1) */
+		transform: translateY(0%);
+	}
+}
+
+@mixin Bounce($Duration: 100ms) {
+	animation: Bounce $Duration infinite;
+}
+
+@mixin Bounce-Cubic-Bezier ($Duration) {
+	animation: Bounce $Duration alternate cubic-bezier(0.95, 0.05, 0.795, 0.035) infinite;
+}
+
+.Slow-Bounce {
+	@include Bounce(150ms)
+}
+
+.Cubic-Bezier-Bounce {
+	@include Bounce-Cubic-Bezier(500ms)
+}
+
+/* BOUNCE HORIZONTAL */
+@keyframes Bounce-Horizontal {
+	0%, 100% {
+		animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+		transform: translateX(-25%);
+	}
+
+	50% {
+		animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+		transform: translateX(0%);
+	}
+}
+
+@mixin Bounce-Horizontal($Duration: 1s, $TimingFunction: cubic-bezier(0.8, 0, 1, 1)) {
+	animation: Bounce-Horizontal $Duration $TimingFunction infinite alternate;
+}
+
+.Horizontal-Bounce {
+	@include Bounce-Horizontal(0.5s, cubic-bezier(0.95, 0.05, 0.795, 0.035))
+}
+
+/* FADE-IN */
+@keyframes Fade-In {
+	0% {
+		opacity: 0;
+	}
+
+	50% {
+		opacity: 0.5;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+@mixin Fade-In($Delay) {
+	animation: Fade-In ease-in $Delay;
+}
+
+/* FADE OUT */
+@keyframes Fade-Out {
+	0% {
+		opacity: 1;
+	}
+
+	50% {
+		opacity: 0.5;
+	}
+
+	100% {
+		opacity: 0;
+	}
+}
+
+@mixin Fade-Out($Delay) {
+	animation: Fade-Out $Delay ease-out;
+}
+
+/* PULSE */
+@keyframes Pulse {
+	0%, 100% {
+		opacity: 1;
+	}
+
+	50% {
+		opacity: 0.5;
+	}
+}
+
+/* SLIDE UP */
+@keyframes Slide-Up {
+	0% {
+		transform: translateY(100%);
+	}
+
+	100% {
+		transform: translateY(0%);
+	}
+}
+
+@mixin Slide-Up {
+	animation: Slide-Up 500ms;
+}
+
+@mixin Slide-Up-Ease-In-Out {
+	animation: Slide-Up 500ms ease-in-out;
+}
+
+@mixin Slide-Up-Cubic-Bezier($Delay) {
+	animation: Slide-Up 100ms cubic-bezier(0.165, 0.84, 0.44, 1) $Delay;
+}
+
+/* SPIN */
+@keyframes Spin {
+	From {
+		transform: rotate(0deg);
+	}
+
+	To {
+		transform: rotate(360deg);
+	}
+}
+
+/* SCREEN READER */
+@mixin Screen-Reader {
+	border: 0;
+	clip: rect(0, 0, 0, 0);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	white-space: nowrap;
+	width: 1px;
+}

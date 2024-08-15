@@ -1,0 +1,57 @@
+@use '../../../SASS/Mixins' as *;
+@use '../../../SASS/Variables' as *;
+
+.Module-Page {
+	@include Screen-Reader;
+}
+
+.Module-Key-Text {
+	columns: var(--Text-Homepage-Hero-Welcome);
+	font-size: 1.125rem;
+	line-height: 1.75rem;
+	padding-bottom: 1rem;
+	text-align: center;
+}
+
+.Module-Key {
+	padding-top: 1.5rem;
+
+	& > * + * {
+		margin-top: 3rem
+	}
+}
+
+.Module-Key-Container {
+	margin-top: 1rem;
+}
+
+.Module-Key-Learning-Outcomes {
+	text-align: center;
+
+	@media (min-width: $Screen-Large) {
+		text-align: left;
+	}
+}
+
+.Module-Key-Score {
+	color: var(--Text-Project-Key-Description);
+	display: flex;
+	font-size: 1.25rem;
+	line-height: 1.75rem;
+	padding: 1rem 0 1rem 0;
+	width: 100%;
+
+	& > * + * {
+		margin-left: 0.25rem;
+	}
+}
+
+.Module-Key-Score-Label {
+	font-weight: 700;
+}
+
+.Module-Key-Materials-Divider {
+	border-color: var(--Border-Related-Skills-Section);
+	border-bottom-width: 1px;
+	padding: 0.5rem 0 0.75rem 0;
+}

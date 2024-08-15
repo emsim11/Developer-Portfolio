@@ -1,0 +1,162 @@
+@use '../../../SASS/Mixins' as *;
+@use '../../../SASS/Variables' as *;
+
+.Hero {
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin-bottom: auto;
+	margin-top: auto;
+	text-align: center;
+	width: 100%;
+
+	@media (min-width: $Screen-Large) {
+		flex-direction: row;
+		justify-content: flex-start;
+		margin-left: 3rem;
+		text-align: left;
+	}
+}
+
+.Profile-Image {
+	display: flex;
+	justify-content: center;
+	padding: 2rem;
+
+	@media (min-width: 1024px) {
+		padding: 0;
+		width: 50%;
+	}
+}
+
+.Developer-Profile-Image {
+	border-radius: 9999px;
+	box-shadow: 0 25px 50px -12px rgb(0, 0, 0, 0.25);
+}
+
+.Hero-Container {
+	align-items: center;
+	justify-content: center;
+	margin-top: 1.75rem;
+	width: 100%;
+
+	@media (min-width: $Screen-Medium) {
+		margin-top: 0.5rem;
+	}
+
+	@media (min-width: $Screen-Large) {
+		justify-content: flex-start;
+		width: 60%;
+	}
+}
+
+.Developer-Info {
+	display: flex;
+	flex-direction: column;
+	margin-top: 1rem;
+}
+
+.Welcome {
+	color: var(--Text-Homepage-Hero-Welcome);
+	font-size: 1.875rem;
+	font-weight: 400;
+	line-height: 2.25rem;
+
+	@media (min-width: $Screen-Medium) {
+		font-size: 3rem;
+		line-height: 1;
+	}
+}
+
+.Developer-Name {
+	font-size: 3rem;
+	font-weight: 700;
+	line-height: 1;
+
+	@media (min-width: $Screen-Medium) {
+		font-size: 4.5rem;
+		line-height: 1;
+	}
+}
+
+.Developer-Roles {
+	background-clip: text;
+	background-image: linear-gradient(to right,  rgba(219, 39, 119), rgba(244, 114, 182));
+	font-size: 1.5rem;
+	font-weight: 600;
+	line-height: 2rem;
+	letter-spacing: 0.025em;
+
+	&.Dark {
+		background-image: linear-gradient(to right, rgba(157, 23, 77), rgba(219, 39, 119));
+	}
+
+	@media (min-width: $Screen-Medium) {
+		color: transparent;
+		font-size: 2.25rem;
+		line-height: 2.5rem;
+		padding: 0.25rem;
+	}
+}
+
+.Hero-Social-Buttons {
+	justify-content: center;
+
+	@media (min-width: $Screen-Medium) {
+		justify-content: center;
+	}
+
+	@media (min-width: $Screen-Large) {
+		justify-content: flex-start;
+	}
+}
+
+.Homepage-Sections {
+	display: flex;
+	justify-content: center;
+	margin-top: 1rem;
+	width: 100%;
+
+	@media (min-width: $Screen-Large) {
+		justify-content: flex-start;
+	}
+}
+
+.Homepage-Sections-Container {
+	display: flex;
+	flex-direction: column;
+	margin-top: 1rem;
+	padding-top: 0.5rem;
+	width: 100%;
+
+	@media (min-width: $Screen-Medium) {
+		flex-direction: row;
+		margin-top: 0;
+		width: 60%;
+	}
+}
+
+.Homepage-Section {
+	font-size: 1rem;
+	margin-right: 1rem;
+	width: 100%;
+}
+
+.About-Section-Button {
+	align-items: center;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	margin-top: 2rem;
+	text-align: center;
+
+	@media (min-width: $Screen-Medium) {
+		margin-bottom: 1rem;
+		margin-top: 5rem;
+	}
+}
+
+.About-Section-Button-Icon {
+	@include Bounce(1.5s);
+}

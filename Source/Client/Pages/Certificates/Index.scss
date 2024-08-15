@@ -1,0 +1,22 @@
+@use '../../SASS/Mixins' as *;
+@use '../../SASS/Variables' as *;
+
+.Certificates-Page {
+	@include Screen-Reader;
+}
+
+.Certificates-Page-Container {
+	align-items: flex-start;
+	display: flex;
+	flex-direction: column;
+
+	@media (min-width: $Screen-Medium) {
+		align-items: flex-end;
+	}
+}
+
+.Certificates {
+	@include Fade-In(0ms);
+	min-height: 85vh;
+	width: 100%;
+}

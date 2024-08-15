@@ -1,0 +1,157 @@
+@use '../../../SASS/Mixins' as *;
+@use '../../../SASS/Variables' as *;
+
+.Project-Key {
+	@include Screen-Reader;
+}
+
+.Project-Key-Data {
+	display: flex;
+	flex-direction: column;
+	min-height: 85vh;
+	position: relative;
+	vertical-align: top;
+
+	& > * + * {
+		margin-top: 0.25rem;
+	}
+}
+
+.Project-Key-With-Cover-Image {
+	// @include Fade-In(0.2s);
+	align-items: center;
+	display: flex;
+	justify-content: center;
+	position: relative;
+	width: 100%;
+	z-index: 0;
+}
+
+.Project-Key-With-Cover-Aspect-Ratio {
+	overflow: hidden;
+	position: relative;
+}
+
+
+.Project-Key-Cover-Image {
+	border-radius: 0.75rem;
+	object-fit: cover;
+	transition: color 700ms;
+}
+
+.Project-Key-Metadata {
+	margin-top: 1rem;
+
+	& > * + * {
+		margin-top: 3rem;
+	}
+}
+
+.Project-Key-Text {
+	text-align: center;
+
+	@media (min-width: $Screen-Medium) {
+		text-align: left;
+	}
+}
+
+.Project-Key-Description-Container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin-top: 0.5rem;
+	z-index: 10;
+
+	@media (min-width: $Screen-Medium) {
+		justify-content: flex-start;
+	}
+}
+
+.Project-Key-Description-Text {
+	color: var(--Text-Project-Key-Description);
+}
+
+.Project-Key-Languages {
+	text-align: center;
+
+	@media (min-width: $Screen-Medium) {
+		text-align: left;
+	}
+}
+
+.Project-Key-Languages-Container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin-top: 0.5rem;
+	z-index: 10;
+
+	@media (min-width: $Screen-Medium) {
+		justify-content: flex-start;
+	}
+}
+
+.Project-Key-Links-Container {
+	align-items: center;
+	display: flex;
+	flex-direction: row;
+	gap: 0.5rem;
+	justify-content: center;
+	margin-top: 1.5rem;
+	width: 100%;
+
+	@media (min-width: $Screen-Medium) {
+		justify-content: flex-start;
+		width: 33.333333%;
+	}
+}
+
+.Project-Key-Link {
+	width: 100%;
+}
+
+.Project-Key-Link-Button {
+	align-items: center;
+	display: flex;
+	gap: 1rem;
+	justify-content: center;
+	width: 100%;
+
+	@media (min-width: $Screen-Medium) {
+		justify-content: flex-start;
+	}
+}
+
+.Project-Key-Link-Text {
+	font-weight: 600;
+}
+
+.Project-Key-Divider {
+	border-color: var(--Border-Related-Skills-Section);
+	border-bottom-width: 1px;
+	padding: 0.5rem 0 0.75rem 0;
+}
+
+.Project-Key-Features {
+	align-items: center;
+	display: flex;
+
+	& > * + * {
+		margin-left: 0.75rem;
+	}
+}
+
+.Project-Key-Features-Icon {
+	color: rgb(115, 115, 115);
+}
+
+.Project-Key-Features-Text {
+	color: var(--Text-Filter-Message);
+	font-size: 1.125rem;
+	font-weight: 600;
+	line-height: 1.75rem;
+}
+
+.Project-Key-Features-Content {
+	padding: 0 0.5rem;
+}

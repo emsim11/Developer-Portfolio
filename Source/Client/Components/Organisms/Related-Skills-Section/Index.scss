@@ -1,0 +1,17 @@
+@use '../../../SASS/Variables' as *;
+
+.Related-Skills-Section {
+	border-color: var(--Border-Related-Skills-Section);
+	border-bottom-width: 1px;
+	padding-bottom: 1.25rem;
+	padding-top: 1.25rem;
+}
+
+.Related-Skills-Section-Container {
+	margin-top: 1rem;
+	text-align: center;
+
+	@media (min-width: $Screen-Medium) {
+		text-align: left;
+	}
+}

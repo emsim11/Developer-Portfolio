@@ -1,0 +1,19 @@
+@function Tint($Color, $Percentage) {
+	@return Mix(#FFFFFF, $Color, $Percentage);
+}
+
+@function Shade($Color, $Percentage) {
+	@return Mix(#000000, $Color, $Percentage);
+}
+
+@function Variable-Color($Color, $Value) {
+	@if $Value < 50 {
+		@return Tint($Color, 100 - ($Value * 2));
+	}
+
+	@if $Value > 50 {
+		@return Shade($Color, ($Value * 2) - 100);
+	}
+
+	@return $Color
+}

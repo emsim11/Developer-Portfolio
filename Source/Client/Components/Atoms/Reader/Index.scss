@@ -1,0 +1,34 @@
+@use '../../../SASS/Variables' as *;
+
+.Reader {
+	margin-bottom: 1.5rem;
+	max-width: none;
+
+	&Img {
+		border-radius: 0.5rem;
+	}
+}
+
+.Base-Prose {
+	@media (min-width: $Screen-Large) {
+		font-size: 1rem;
+	}
+}
+
+.Small-Prose {
+	@media (min-width: $Screen-Large) {
+		font-size: 0.875rem;
+	}
+}
+
+.Medium-Prose {
+	@media (min-width: $Screen-Large) {
+		font-size: 1.125rem;
+	}
+}
+
+.Large-Prose {
+	@media (min-width: $Screen-Large) {
+		font-size: 1.25rem;
+	}
+}

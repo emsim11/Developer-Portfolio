@@ -1,0 +1,7 @@
+@use '../../SASS/Mixins' as *;
+
+.More-Page {
+	@include Fade-In(0.2s);
+	min-height: 85vh;
+	width: 100%;
+}

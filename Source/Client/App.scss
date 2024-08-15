@@ -1,0 +1,11 @@
+@import './SASS/Color-Palette';
+@import './SASS/Mixins';
+@import './SASS/Reset';
+@import './SASS/Themes';
+@import './SASS/Typography';
+@import './SASS/Variables';
+
+H1 {
+	font-size: 2em;
+	margin: 0.67em 0;
+}

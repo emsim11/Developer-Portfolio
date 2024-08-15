@@ -1,0 +1,83 @@
+@use '../../../SASS/Variables' as *;
+
+.Filter-Section-Accordion-Trigger {
+	align-items: center;
+	display: flex;
+
+	& > * + * {
+		margin-left: 0.75rem;
+	}
+}
+
+.Filter-Section-Manage-Search-Icon {
+	color: var(--Icon-Search);
+}
+
+.Filter-Section-Accordion-Message {
+	color: var(--Text-Filter-Message);
+	font-size: 1.125rem;
+	font-weight: 600;
+	line-height: 1.75rem;
+}
+
+.Filter-Section-Accordion-Content {
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+}
+
+.Filter-Section-Accordion-Content-Container {
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+	padding-bottom: 0.5rem;
+	padding-top: 0.5rem;
+	width: 100%;
+
+	@media (min-width: $Screen-Medium) {
+		flex-direction: row;
+	}
+}
+
+.Filter-Section-Buttons {
+	display: flex;
+	flex-direction: row;
+	gap: 0.5rem;
+	width: 100%;
+
+	@media (min-width: $Screen-Medium) {
+		flex: 1 1 0%;
+	}
+}
+
+.Filter-Section-Button {
+	border: 1px solid var(--Border-Filter-Button);
+	box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+	display: flex;
+	justify-content: flex-start;
+	width: 100%;
+
+	@media (min-width: $Screen-Medium) {
+		box-shadow:
+			0 4px 6px -1px rgb(0 0 0 / 0.1),
+			0 2px 4px -2px rgb(0 0 0 / 0.1);
+	}
+}
+
+.Filter-Section-Button-Icon-Container {
+	align-items: center;
+	display: flex;
+
+	& > * + * {
+		margin-left: 0.5rem;
+	}
+}
+
+.Filter-Section-Button-Icon {
+	color: var(--Icon-Filter-Section);
+}
+
+.Filter-Section-Clear-Button {
+	width: 100%;
+}
