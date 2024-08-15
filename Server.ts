@@ -30,9 +30,14 @@ const CreateServer = async (IsProduction = process.env.NODE_ENV === 'Production'
 	App.use('/Public', RequestHandler)
 	if (IsProduction) {
 		App.use(compression())
-		App.use(serveStatic(Resolve('Client'), { index: false }))
+		/* Serve Static Files From `Client/Dist` Directory */
+		App.use(serveStatic(Resolve('Client/Dist'), { index: false }))
+		/* Server `index.html` File For All Non-API Routes */
+		App.get('*', (_Request: Request, Response: Response) => {
+			Response.sendFile(path.join(__DirectoryName, '../Client/Dist/index.html'))
+		})
 	}
-	
+
 	/* Cached Production Assets */
 	const BaseTemplate = await fs.readFile(IsProduction ? Resolve('Client/index.html') : Resolve('index.html'), 'utf-8')
 	const ProductionBuildPath = path.join(__DirectoryName, './Server/Entry-Server.js')
@@ -55,7 +60,7 @@ const CreateServer = async (IsProduction = process.env.NODE_ENV === 'Production'
 			Next(Error)
 		}
 	})
-	
+
 	/* Start HTTP Server */
 	App.listen(Number(PORT), '0.0.0.0', () => {
 		console.log(`Server Is Running On http://localhost:${PORT}`)

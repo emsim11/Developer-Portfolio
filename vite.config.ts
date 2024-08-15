@@ -4,6 +4,7 @@ import * as Path from 'path'
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import { VitePWA } from 'vite-plugin-pwa'
+import { terser as Terser } from 'rollup-plugin-terser'
 
 import Manifest from './Public/Manifest.json'
 let FavIcon = './Public/Logo.svg'
@@ -11,22 +12,30 @@ let FavIcon = './Public/Logo.svg'
 export default defineConfig({
 	build: {
 		rollupOptions: {
-		  	external: ['fs'],
+			external: ['fs'],
+			plugins: [Terser()], /* Enable Minification */
 		},
+		chunkSizeWarningLimit: 2000, /* Set A Warning Limit For Chunk Size */
 	},
 	plugins: [
 		react(),
 		VitePWA({
 			devOptions: {
 				enabled: true,
+				type: 'module',
 			},
 			includeAssets: [
 				FavIcon,
 			],
+			injectRegister: 'inline',
 			manifest: {
 				...Manifest,
 				display: 'standalone',
 				orientation: 'any',
+			},
+			registerType: 'autoUpdate',
+			workbox: {
+				globPatterns: ['**/*.{js,ts,tsx,css,scss,html,ico,jpeg,jpg,png,svg,md,pdf,ttf}'],
 			},
 		}),
 	],
