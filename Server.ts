@@ -24,6 +24,15 @@ const CreateServer = async (IsProduction = process.env.NODE_ENV === 'Production'
 		optimizeDeps: { include: [] },
 	})
 	App.use(Vite.middlewares)
+	/* Set MIME Type For PDF Files */
+	const SetPDFMimeType = (Request: Request, Response: Response, Next: NextFunction) => {
+		if (Request.url.endsWith('.pdf')) {
+			Response.setHeader('Content-Type', 'application/pdf')
+		}
+		Next()
+	}
+	/* Add `SetPDFMimeType` Function Before Serving Static Files */
+	App.use(SetPDFMimeType)
 	const AssetsDirectory = Resolve('Public')
 	const RequestHandler = express.static(AssetsDirectory)
 	App.use(RequestHandler)
@@ -31,7 +40,7 @@ const CreateServer = async (IsProduction = process.env.NODE_ENV === 'Production'
 	if (IsProduction) {
 		App.use(compression())
 		/* Serve Static Files From `Client/Dist` Directory */
-		App.use(serveStatic(Resolve('Client/Dist'), { index: false }))
+		App.use(serveStatic(Resolve('Client/Dist'), { index: ['index.html', 'index.htm'] }))
 		/* Server `index.html` File For All Non-API Routes */
 		App.get('*', (_Request: Request, Response: Response) => {
 			Response.sendFile(path.join(__DirectoryName, '../Client/Dist/index.html'))
